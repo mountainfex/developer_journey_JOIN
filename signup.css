@@ -4,14 +4,6 @@
     font-style: normal;
     }
 
-.Background {
-    background-color: #F5F5F5;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .headerLeft{
     position: absolute;
     left: 5.35%;
@@ -19,6 +11,14 @@
     top: 7.81%;
     bottom: 80.28%;
 
+}
+
+.Background {
+    background-color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signUpFrame {
