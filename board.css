@@ -1,0 +1,251 @@
+.boxMajor {
+    background-color: aqua;
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    width: 79%;
+    height: 89px;
+    left: 21%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* gap: 34px; */
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+/* font-family: Inter;
+font-size: 21px;        //Text????
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+color: #000000; */
+}
+
+.headerKanban {
+    padding-left: 10%;
+}
+
+.headerFoto{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 49px;
+    gap: 15%;
+    padding-right: 5%;
+}
+
+.fotoRound {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 52px;
+    height: 52px;
+    border: 3px solid #2A3647;
+    z-index: 1;
+}
+
+.headerFotoUserLogo {
+    width: 49px;
+    height: 49px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("assets/img/anna.png");
+    background-repeat: no-repeat;
+    background-position: center; */
+    border-radius: 100%;
+    z-index: 0;
+
+}
+
+.headerFoto img {
+    border-radius: 100%;
+}
+
+.navBar {
+    width: 17%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 103px;
+
+    background: #2A3647;
+    /* nuevo */
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.navCapa {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navCapa img{
+    /* position: absolute;
+    left: 28.44%;
+    right: 28.44%;
+    top: 6.45%;
+    bottom: 81.64%; */
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 40%; */
+    /* gap: 15px; */
+    width: 100%;
+    height: 20%;
+    /* height: 229px; */
+}
+
+.navClasses {
+    /* width: 100%;
+    padding-left: 50px; */
+}
+
+.navClasses a {
+    display: flex;
+    flex-direction: flex-start;
+
+    align-items: center;
+    padding: 8px;
+    gap: 20px;
+    height: 60px;
+    width: 200px;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none !important;
+    /* font-size: 16px; */
+    word-break: keep-all;
+    line-height: 120%;
+    color: #FFFFFF;
+    
+    display: flex;
+    align-items:center;
+}
+
+.navClasses a:hover {
+    cursor: pointer;
+    background-color:#29ABE2;
+    border-radius: 10px;
+}
+
+.navClasses a img {
+    padding-right: 20px;
+}
+
+.navLegal {
+
+}
+
+.workSpace {
+    width: 70%;
+    position: absolute;
+    right: 0px;
+    top: 89px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 4%;
+    background: green;
+}
+
+.boardHead {
+    background: #f6f7f8;
+    width: 100%;
+    height: 30%;
+}
+
+.toolsTop{
+    height: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 100px;
+
+}
+
+.toolsTop h1{
+ 
+    margin: 0;
+}
+ 
+.boardSearch {
+
+}
+
+.boardSearch input {
+    width: 251px;
+    height: 51px;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+}
+
+.boardSearch button {
+    background-color:#2A3647;
+    height: 51px;
+    left: 286px;
+    radius: 10px;
+    padding: 18px, 10px, 18px, 10px;
+}
+
+.toolsBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boardBottom {
+    background: #f6f7f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.toolsAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #2A3647;
+    border-radius: 10px;    
+    transform: rotate(90deg);
+}
+
+.dragNdrop_area1 {
+
+}
