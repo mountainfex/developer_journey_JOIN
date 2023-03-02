@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    }
+
+.loginBackground {
+    background-color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 35px 0px; */
+    gap: 35px;
+    position: absolute;
+    width: 652px;
+    height: 513px;
+
+/* white */
+
+    background: #FFFFFF;
+/* shadoe backlog box */
+
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+}
+
+.loginHeader {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    /* or 73px */
+    
+    text-align: center;
+    color: #000000;
+}
+
+
+.loginHeader p {
+    margin: 0;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+.loginInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    
+}
+
+.loginInput input {
+    box-sizing: border-box;
+    /* Auto layout */
+    padding: 13px 21px;
+    width: 422px;
+    background: #FFFFFF;
+    /* Style */
+
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.rememberMe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox input {
+    /* Boton gradient */
+    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    color: #000000;
+}
+
+.forgot {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    /* Ligth blue */
+    color: #29ABE2;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.loginButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+
+    width: 145px;
+    height: 51px;
+
+    background: #2A3647;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    color: #FFFFFF;
+}
+
+.guestLoginButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+
+    width: 145px;
+    height: 51px;
+
+    background: #fff;
+    border-radius: 8px;
+    border-color: #2A3647;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    color: #2A3647;
+}
