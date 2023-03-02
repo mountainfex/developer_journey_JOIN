@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="summary.css">
 
@@ -13,21 +15,87 @@
     
 </head>
 <body>
-    <div class="summary-main">
-        <div class="summary-header">
-            <div class="headline">Summary</div>
-            <div class="line"></div>
-            <div class="slogan">Everything in a nutshell!</div>
-        </div>
-
-        <div class="summary-content">
-            <div class="tasks">
-
+    <div class="main">
+        <div class="summary-main">
+            <div class="summary-header">
+                <div class="headline">Summary</div>
+                <div class="line"></div>
+                <div class="slogan">Everything in a nutshell!</div>
             </div>
 
+            <div class="middle">
+                <div class="summary-content">
+                    <div class="tasks">
+                        <div class="tasks-steps">
+                            <!-- bsp eines containers -->
+                            <div class="task-box">
+                                <div href="board.html" class="task-box-content">
+                                    <span class="task-amount" id="task-amount">5</span>
+                                    <span class="task-description">Tasks in Board</span>
+                                </div>
+                            </div>
+                            <!-- task box2 -->
+                            <div class="task-box">
+                                <div href="board.html" class="task-box-content">
+                                    <span class="task-amount" id="task-amount">2</span>
+                                    <span class="task-description">Tasks in Progress</span>
+                                </div>
+                            </div>
+                            <div class="task-box">
+                                <div href="board.html" class="task-box-content">
+                                    <span class="task-amount" id="task-amount">2</span>
+                                    <span class="task-description">Await Feedback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- middle urgent date box -->
+                    <div class="task-target-date">
+                        <div class="task-urgency">
+                            <img src="assets/img/urgent-color.svg" alt="">
+                            <div class="task-level-box">
+                                <span class="task-level">1</span>
+                                <span class="task-level-name">Urgent</span>
+                            </div>
+                        </div>
+                        <div class="line">   
+                        </div>
+                        <div class="task-date-box">
+                            <span class="task-date-deadline">Oktober 16, 2022</span>
+                            <span class="task-date-description">Upcoming Deadline</span>
+                        </div>
+                    </div>
+                    <!-- bottom task box -->
+                    <div class="task-bottom-content">
+                        <div class="tasks-To-do">
+                            <img src="assets/img/pencil-nobg.svg" class="pencil" >
+                            <div class="tasks-To-do-amount">
+                                <span class="task-amount">1</span>
+                                <span class="task-description">To-do</span>
+                            </div>
+                        </div>
+                        <div class="tasks-Done-content">
+                            <img src="assets/img/pencil-nobg.svg" class="pencil"  >
+                            <div class="tasks-Done">
+                                <span class="task-amount">1</span>
+                                <span class="task-description">To-do</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="welcome-name"> 
+                    <span class="good-morning">Good Morning,</span>
+                    <span class="welcome-login-name">Sofia Müller</span>
+                </div>
+            </div>
+        
+            
+
+
         </div>
-
-
     </div>
     
 </body>
