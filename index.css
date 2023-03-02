@@ -1,5 +1,7 @@
 *{
     margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
     }
 
 .loginBackground {
@@ -8,6 +10,68 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.headerLeft{
+    position: absolute;
+    left: 5.35%;
+    right: 87.71%;
+    top: 7.81%;
+    bottom: 80.28%;
+
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    
+    position: absolute;
+    width: 287px;
+    height: 51px;
+    right: 200px;
+    top: 67px;
+}
+
+.headerLeft p{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+
+
+color: #000000;
+}
+
+.signUpButton {
+    padding: 4px 16px;
+    gap: 10px;
+
+    width: 91px;
+    height: 51px;
+
+    background: #2A3647;
+    border-radius: 8px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    line-height: 120%;
+    /* or 19px */
+    
+    color: #FFFFFF;
+    transition: 200ms;
+}
+
+.signUpButton:hover {
+    cursor: pointer;
+    background: #29ABE2;
+    /* stronger */
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .loginFrame {
@@ -31,8 +95,6 @@
 }
 
 .loginHeader {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 61px;
     line-height: 120%;
@@ -57,27 +119,33 @@
 .loginInput {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 35px;
-    
+    width: 422px;
 }
 
-.loginInput input {
+.input {
     box-sizing: border-box;
     /* Auto layout */
     padding: 13px 21px;
-    width: 422px;
     background: #FFFFFF;
     /* Style */
-
     border: 1px solid #D1D1D1;
     border-radius: 10px;
+   /* or 25px */    
+   
+}
 
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+.input input {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+.input input::placeholder{
+    color: #D1D1D1;
 }
 
 .rememberMe {
@@ -85,6 +153,10 @@
     justify-content: center;
     gap: 30px;
     
+}
+
+.rememberMe a{
+    text-decoration: none;
 }
 
 .checkbox {
@@ -102,8 +174,6 @@
 }
 
 .checkbox p {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -112,8 +182,6 @@
 }
 
 .forgot {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -121,12 +189,9 @@
 
     /* Ligth blue */
     color: #29ABE2;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
+
+
 
 .btn {
     display: flex;
@@ -148,13 +213,20 @@
     background: #2A3647;
     border-radius: 8px;
     border: none;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 21px;
     line-height: 120%;
     /* or 25px */
     color: #FFFFFF;
+    transition: 200ms;
+}
+
+.loginButton:hover {
+    cursor: pointer;
+    background: #29ABE2;
+    /* stronger */
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .guestLoginButton {
@@ -170,12 +242,18 @@
 
     background: #fff;
     border-radius: 8px;
-    border-color: #2A3647;
-    font-family: 'Inter';
-    font-style: normal;
+    border: solid 1px #2A3647;
     font-weight: 700;
     font-size: 21px;
     line-height: 120%;
     /* or 25px */
     color: #2A3647;
+    transition: 200ms;
+}
+
+.guestLoginButton:hover {
+    cursor: pointer;
+    color: #29ABE2;
+    border-color: #29ABE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
