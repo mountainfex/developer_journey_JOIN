@@ -40,9 +40,7 @@
     font-size: 21px;
     line-height: 120%;
     /* or 25px */
-
-
-color: #000000;
+    color: #000000;
 }
 
 .signUpButton {
@@ -64,14 +62,6 @@ color: #000000;
     
     color: #FFFFFF;
     transition: 200ms;
-}
-
-.signUpButton:hover {
-    cursor: pointer;
-    background: #29ABE2;
-    /* stronger */
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .loginFrame {
@@ -221,11 +211,9 @@ color: #000000;
     transition: 200ms;
 }
 
-.loginButton:hover {
+.button:hover {
     cursor: pointer;
-    background: #29ABE2;
-    /* stronger */
-
+    background-color: #29ABE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
