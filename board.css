@@ -1,11 +1,17 @@
+
+
+body {
+    margin: 0;
+}
+
+.html {scroll-behavior: smooth;
+
+}
+
 .boxMajor {
     background-color: aqua;
     position: relative;
 
-}
-
-body {
-    margin: 0;
 }
 
 .header {
@@ -281,23 +287,21 @@ body {
 
 .boardBottom_dragNdropArea {
     width: 100%;
-    height: 100vh;
-    height: auto; 
+    height: 100vh; 
     background-color: #f6f7f8;
     display: flex;
-    position: relative;
 
 }
 
 .toolsBottom {
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top:0px;
     margin-right: 6%;
     margin-bottom: 15px;
+
 }
 
 .toolsBottom p {
@@ -329,34 +333,27 @@ body {
     filter: invert(54%) sepia(99%) saturate(674%) hue-rotate(165deg) brightness(92%) contrast(93%);
 }
 
-
 .dragNdrop_1_toDo {
-    position: absolute;
-    top: 0px;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 25%;
 }
 
 .dragNdrop_2_InProgress {
-    position: absolute;
-    top: 0px;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     width: 25%;
 }
 
 .dragNdrop_3_AwaitingFeedback {
-    position: absolute;
-    top: 0px;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     width: 25%;
 }
 
 .dragNdrop_4_Done {
-    position: absolute;
-    top: 0px;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     width: 25%;
 }
 
