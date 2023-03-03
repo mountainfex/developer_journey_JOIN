@@ -1,0 +1,42 @@
+.PopUpContainer{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 25px;
+    isolation: isolate;
+
+    position: relative;
+    width: 623px;
+    height: 824px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.PopUpContainer{
+position: absolute;
+width: 21.65px;
+height: 21.65px;
+left: 574.31px;
+top: 34px;
+}
+
+.d-none {
+    display:none;
+}
+
+.d-on{
+    display: flex;
+}
