@@ -12,6 +12,7 @@
     background: #F6F7F8;
 }
 .contact-bar{   
+    padding: 24px;
     max-width: 100%;    
     width: 453px;
     /* height: 935px; */
@@ -92,4 +93,62 @@
     background: #2A3647;
     border: 1px solid #2A3647;
     border-radius: 10px;
+}
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    /* position: absolute; */
+    width: 357px;
+    height: 1072px;
+    left: 48px;
+    top: 2px;
+    /* white */
+    background: #FFFFFF;
+}
+.contact-letter{
+    width: 282px;
+    height: 40px;
+    /* Version 2/t6 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.contact-border{
+    width: 323px;
+    height: 0px;
+    /* Style */
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+}
+.contact-list-order{
+    display: flex;
+}
+.contact-initials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 42px;
+    height: 42px;
+    background: #FFFFFF;
+    border-radius: 45px;
+    box-sizing: border-box;
+   
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    top: 0px;
+    background: #FF7A00;
+    border: 1px solid #FFFFFF;
+
 }
