@@ -273,7 +273,7 @@ input[type=number] {
 }
 
 .borderButton:hover img {
-    filter: invert(71%) sepia(53%) saturate(4476%) hue-rotate(165deg) brightness(95%) contrast(87%);
+    filter: invert(45%) sepia(92%) saturate(2750%) hue-rotate(164deg) brightness(99%) contrast(101%);
 }
 
 .borderButton:active {
