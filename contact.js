@@ -23,19 +23,19 @@
 // 	}
 // });
 
-// let openbutton = document.getElementById("openBtn");
-// let closebutton = document.getElementById("closeBtn");
-// let popUpContact = document.getElementById("mainPopUp");
+let openbutton = document.getElementById("openBtn");
+let closebutton = document.getElementById("closeBtn");
+let popUpContact = document.getElementById("mainPopUp");
 
 
 function slideIn(){
     let popup = document.getElementById("popup");
-    popup.classList.remove('slideOut');
+    popup.classList.remove('slideout');
     popup.classList.add('slidein');
 } 
 
 function slideOut() {
     let popup = document.getElementById("popup");
-    popup.classList.add('slideOut')
+    popup.classList.add('slideout')
     popup.classList.remove('slidein');
 }

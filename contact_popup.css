@@ -347,7 +347,7 @@ input[type=number] {
 
 .slidein{
     display: flex !important;
-    animation: slideIn 600ms ease-in-out;
+    animation: slide-in 600ms ease-in-out;
 }
 
 .slideout {
