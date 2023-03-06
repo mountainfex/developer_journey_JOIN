@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact_popup.css">
 
     <script src="script.js"></script>
+    <script src="contact.js"></script>
 
     <title>Contact Seite</title>
     
@@ -150,7 +152,7 @@
                 </div>
             
                 <div class="newContact">
-                    <button class="button">New contact
+                    <button class="button" id="openBtn" onclick="slideIn()">New contact
                         <img src="assets/img/icons-add-contact.svg" alt="">
                     </button>
                 </div>
@@ -158,6 +160,49 @@
 
 
 
+        </div>
+    </div>
+
+    <div class="popUpBackground" id="popup">
+        <div class="popUpContact" id="mainPopUp">
+            <div class="popUpLeft">
+                <img class="logoimg" src="assets/img/logo_light.png" alt="">
+                <div class="popUpLeftText">
+                    <p class="popUpLeftHeader">Add Contact</p>
+                    <p class="popUpLeftSubline">Tasks are better with a team!</p>
+                </div>
+                <img src="assets/img/Vector 5 (1).png" alt="">
+             </div>
+            <div class="popUpRight">
+                <img class="xicon" id="closeBtn" onclick="slideOut()" src="assets/img/icon-x.svg" alt="">
+                <div class="popUpRightImg">
+                    <div class="popUpRightImgBG">
+                        <img src="assets/img/icon-user.svg" alt="">
+                    </div>                    
+                </div>
+                <form onsubmit="" class="popUpAddContact">
+                    <div class="input">
+                        <input required type="text" placeholder="Name">
+                        <img src="assets/img/icon-user-grey.svg" alt="">
+                    </div>
+                    <div class="input">
+                        <input required type="email" placeholder="Email">
+                        <img src="assets/img/email_input.svg" alt="">
+                    </div>
+                    <div class="input">
+                        <input required type="number" placeholder="Phone">
+                        <img src="assets/img/icon-phone.svg" alt="">
+                    </div>
+                    <div class="popUpButton">
+                        <button class="cancelBtn borderButton">Cancel
+                            <img src="assets/img/icons-cancel.svg" alt="">
+                        </button>
+                        <button class="createBtn ">Create Contact
+                            <img src="assets/img/icon-check-dark.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     

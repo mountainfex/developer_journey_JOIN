@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="js/signup.js"></script>
+    <script src="js/login.js"></script>
     <title>JOIN | Log in</title>
 </head>
 <body>
@@ -23,7 +25,7 @@
             <div class="loginFrame">
                     <p class="loginHeader">Log in</p>
                 <img src="assets/img/login_underline.png" alt="">
-                <form class="login" onsubmit="">
+                <form class="login" onsubmit="login(); return false;">
                 <div class="loginInput">
                     <div class="input">
                         <input required type="email" placeholder="Email" id="email" >
@@ -48,6 +50,7 @@
                 </form>
             </div>
         </div>
+        <div class="msgBox" id="msgBox"></div>
     </section>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="./assets/templates/Navbar.js"></script>
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="summary.css">
@@ -14,7 +15,8 @@
     <title>Summary Seite</title>
     
 </head>
-<body>
+<body onload="includeHTML()">
+    <div w3-include-html="assets/templates/Navbar.html"></div>
     <div class="main">
         <div class="summary-main">
             <div class="summary-header">

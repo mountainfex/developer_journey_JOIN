@@ -133,6 +133,7 @@ body {
     height: 100vh; 
     background-color: #f6f7f8;
     display: flex;
+    gap: 20px;
 
 }
 
@@ -194,21 +195,18 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding-left: 2%;
 }
 
 .dragNdrop_3_AwaitingFeedback {
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding-left: 2%;
 }
 
 .dragNdrop_4_Done {
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding-left: 2%;
 }
 
 .postIt {
@@ -283,9 +281,9 @@ body {
 
 }
 
-.postIt_ProgressBar{
+/* .postIt_ProgressBar{
     
-}
+} */
 
 .postIt_StatusAccomplished{
     width: 51px;
@@ -298,7 +296,7 @@ body {
     color: #000000;
 }
 
-.postIt_PriorityClass{
+/* .postIt_PriorityClass{
     
-}
+} */
 
