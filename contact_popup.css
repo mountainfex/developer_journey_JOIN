@@ -263,6 +263,7 @@ input[type=number] {
     flex: none;
     order: 0;
     flex-grow: 0;
+    transition: 200ms;
 }
 
 .borderButton:hover {
@@ -315,6 +316,7 @@ input[type=number] {
     flex: none;
     order: 1;
     flex-grow: 0;
+    transition: 200ms;
 }
 
 .createBtn img {

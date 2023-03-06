@@ -5,7 +5,6 @@
     width: calc(100%-950px);
     /* position: relative; */
     /* width: 1440px; */
-    height: 1024px;
     background: #F6F7F8;
 }
 .contact-bar{   
@@ -17,7 +16,7 @@
     top: 89px;
     /* white */
     background: #FFFFFF;
-    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08); */
     margin-left: 250px;
 }
 .contact-content{
@@ -98,6 +97,7 @@
     font-weight: 700;
     font-size: 21px;
     line-height: 120%;
+    transition: 200ms;
 }
 
 .button:hover {
@@ -123,6 +123,7 @@
     text-align:justify;
     max-height: 790px;
     background-color: white;  
+    transition: 200ms;
 }
 .contact-bar-scroll::-webkit-scrollbar-button{
     background-size: 100%;

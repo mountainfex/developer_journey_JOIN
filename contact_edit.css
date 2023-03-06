@@ -253,6 +253,7 @@ input[type=number] {
     flex: none;
     order: 1;
     flex-grow: 0;
+    transition: 200ms;
 }
 
 .button:hover {
