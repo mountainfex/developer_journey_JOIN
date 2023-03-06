@@ -98,7 +98,7 @@ body {
     height:20px;
 }
 
-.boardSearch_BTN{
+.boardSearchBtn{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -110,33 +110,30 @@ body {
     height: 51px;
     
     background: #2A3647;
-    border: 1px solid #2A3647;
     border-radius: 10px;
+    border: none ;
     flex: none;
     order: 1;
     flex-grow: 0;
-}
 
-.boardSearch_BTN img {
-    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
-}
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
 
-.boardSearch_BTN:hover {
+
+    /* white */
+
+    color: #FFFFFF;
+}
+.boardSearchBtn:hover {
     cursor: pointer;
     background-color: #29ABE2;
 }
 
-.boardSearch_BTN:hover img {
-    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
-}
-
-.boardSearch_BTN:active {
+.boardSearchBtn:active {
     background-color: #091931;
 }
 
-.boardSearch_BTN:active img {
-    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
-}
 
 .boardBottom_dragNdropArea {
     width: 100%;
