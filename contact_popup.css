@@ -354,6 +354,14 @@ input[type=number] {
     animation: slide-out 600ms ease-in-out;
 }
 
+.fadein{
+    display: flex ;
+    animation: fade-in 600ms ease-in-out;
+}
+.fadeout{
+    animation: fade-out 600ms ease-in-out;
+}
+
 
 @keyframes slide-in {
 	0% {
