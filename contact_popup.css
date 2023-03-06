@@ -273,7 +273,7 @@ input[type=number] {
 }
 
 .borderButton:hover img {
-    filter: invert(45%) sepia(92%) saturate(2750%) hue-rotate(164deg) brightness(99%) contrast(101%);
+    filter: invert(56%) sepia(67%) saturate(557%) hue-rotate(156deg) brightness(92%) contrast(92%);
 }
 
 .borderButton:active {
@@ -281,6 +281,11 @@ input[type=number] {
     color: #091931;
     border-color: #091931;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   
+}
+
+.borderButton:active img {
+    filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
 }
 
 
@@ -326,7 +331,11 @@ input[type=number] {
     background: #FFFFFF;
     /* stronger */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: black;
+    color: #091931;
+}
+
+.button:active img {
+    filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
 }
 
 
