@@ -303,6 +303,36 @@ body {
     color: #000000;
 }
 
+.postIt_Staff{
+
+}
+
+.contact_initials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 42px;
+    height: 42px;
+    background: #FFFFFF;
+    border-radius: 45px;
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    top: 0px;
+    background: #FF7A00;
+    border: 1px solid #FFFFFF;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+
 /* .postIt_PriorityClass{
     
 } */
