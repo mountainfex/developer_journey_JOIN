@@ -36,12 +36,13 @@
     background-color: #FFFFFF;
     width: 21.65px;
     height: 21.65px;
-    transform: rotate(45deg);
     border: none;
+    transition: 200ms;
 }
 
 .PopUpContainer button:hover{
     cursor: pointer;
+    transform: rotate(135deg);
 }
 
 .PopUp_Head{
