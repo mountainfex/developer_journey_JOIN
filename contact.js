@@ -32,10 +32,12 @@ function slideIn(){
     let popup = document.getElementById("popup");
     popup.classList.remove('slideout');
     popup.classList.add('slidein');
+    popup.classList.remove("dnone");
 } 
 
 function slideOut() {
-    let popup = document.getElementById("popup");
-    popup.classList.add('slideout')
-    popup.classList.remove('slidein');
+    let popup = document.getElementById("popup"); 
+    popup.classList.add('slideout');
+    setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 600);
 }
+

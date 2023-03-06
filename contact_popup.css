@@ -342,11 +342,11 @@ input[type=number] {
 }
 
 .dnone {
-    display: none;
+    display: none !important;
 }
 
 .slidein{
-    display: flex !important;
+    display: flex ;
     animation: slide-in 600ms ease-in-out;
 }
 
