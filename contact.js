@@ -26,18 +26,29 @@
 let openbutton = document.getElementById("openBtn");
 let closebutton = document.getElementById("closeBtn");
 let popUpContact = document.getElementById("mainPopUp");
+let popup = document.getElementById("popup");
 
 
 function slideIn(){
     let popup = document.getElementById("popup");
-    popup.classList.remove('slideout');
-    popup.classList.add('slidein');
-    popup.classList.remove("dnone");
+    let popUpContact = document.getElementById("mainPopUp");
+    popUpContact.classList.remove('slideout');
+    popUpContact.classList.add('slidein');
+    popUpContact.classList.remove("dnone");
+    popup.classList.remove('fadeout');
+    popup.classList.add('fadein');
+    popup.classList.remove('dnone');
+    
+
+
 } 
 
 function slideOut() {
-    let popup = document.getElementById("popup"); 
-    popup.classList.add('slideout');
+    let popup = document.getElementById("popup");
+    let popUpContact = document.getElementById("mainPopUp");
+    popUpContact.classList.add('slideout');
+    popup.classList.add('fadeout');
     setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 500);
+    setTimeout(function(){document.getElementById('mainPopUp').classList.add('dnone')}, 500);
 }
 
