@@ -208,6 +208,7 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
+
 .popUpButton {
     display: flex;
     flex-direction: row;
@@ -340,18 +341,18 @@ input[type=number] {
     filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
 }
 
-/* .dnone {
+.dnone {
     display: none;
 }
 
 .slidein{
     display: flex !important;
-    animation: slide-in 600ms ease-in-out;
+    animation: slideIn 600ms ease-in-out;
 }
 
 .slideout {
     animation: slide-out 600ms ease-in-out;
-} */
+}
 
 
 @keyframes slide-in {
