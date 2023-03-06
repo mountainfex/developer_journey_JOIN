@@ -38,6 +38,6 @@ function slideIn(){
 function slideOut() {
     let popup = document.getElementById("popup"); 
     popup.classList.add('slideout');
-    setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 600);
+    setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 500);
 }
 
