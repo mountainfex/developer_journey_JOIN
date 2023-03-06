@@ -1,0 +1,197 @@
+/* Version 1 Add task */
+
+body {
+  margin: 0;
+  position: relative;
+  background: #F6F7F8;
+}
+
+
+
+
+.task-container {
+    display: flex;
+    background-color: #F4F3FB;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.task-container-content {
+    margin: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+.form-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: 16px;
+    justify-content: center;
+}
+
+.task-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-label {
+    color: #1E3190;
+    font-size: 1em;
+    margin: 6px 0 6px 0;
+}
+
+.task-title input {
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    font-size: 1.2em;
+    height: 50px;
+    padding: 0 8px 0 8px;
+}
+
+.form-category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 6px 0 6px 0;
+}
+
+.form-category select {
+    width: 100%;
+    font-size: 1.2em;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    padding: 0 8px 0 8px;
+    height: 50px;
+    background: url(/src/img/chevron.png) no-repeat right white;
+    transition: all 125ms ease-in-out;
+   
+    background-size: 16px;
+    background-position-x: 96%;
+}
+
+.form-category select:hover {
+    transition: all 125ms ease-in-out;
+    background: url(/src/img/chevron-blue.png) no-repeat right white;
+   
+    background-size: 16px;
+    background-position-x: 96%;
+    background-position-y: 58%;
+    cursor: pointer;
+}
+
+.form-description {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-description textarea {
+    resize: none;
+    font-size: 1.2em;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.task-container-content form {
+    display: flex;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: 16px;
+    justify-content: center;
+}
+
+.form-due-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-due-date input {
+    font-size: 1.2em;
+    font-family: 'PT Sans', sans-serif;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    padding: 0 8px 0 8px;
+    height: 50px;
+}
+
+.form-due-date input::-webkit-calendar-picker-indicator {
+    background: url(/src/img/icons8-calendar-150.png) no-repeat right white;
+    background-size: 26px;
+    height: 50px;
+    width: 50px;
+    transform: translateX(-10px);
+    transition: all 125ms ease-in-out;
+}
+
+.form-due-date input:hover::-webkit-calendar-picker-indicator {
+    background: url(/src/img/icons8-calendar-150-blue.png) no-repeat right white;
+    background-size: 26px;
+    height: 50px;
+    width: 50px;
+    transform: translateX(-12px);
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+}
+
+.form-urgency {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 6px 0 6px 0;
+}
+
+.form-urgency select {
+    width: 100%;
+    font-size: 1.2em;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    padding: 0 8px 0 8px;
+    height: 50px;
+    background: url(/src/img/chevron.png) no-repeat right white;
+ 
+    background-size: 16px;
+    background-position-x: 96%;
+    transition: all 125ms ease-in-out;
+}
+
+.form-urgency select:hover {
+    transition: all 125ms ease-in-out;
+    background: url(/src/img/chevron-blue.png) no-repeat right white;
+ 
+    background-size: 16px;
+    background-position-x: 96%;
+    background-position-y: 58%;
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+}
+
+.form-assigned-to {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin: 6px 0 6px 0;
+}
+
+.content-assigned-to {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 6px 0 6px 0;
+}
+
+.assigned-to-user-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+}

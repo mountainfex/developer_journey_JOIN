@@ -1,0 +1,178 @@
+.boxMajor {
+    background-color:rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 100vw;
+}
+
+.PopUpContainer{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 25px;
+    isolation: isolate;
+
+    width: 623px;
+    height: 824px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.PopUpContainer button{
+    position: absolute;
+    right: 50px;
+    background-color: #FFFFFF;
+    width: 21.65px;
+    height: 21.65px;
+    transform: rotate(45deg);
+    border: none;
+}
+
+.PopUpContainer button:hover{
+    cursor: pointer;
+}
+
+.PopUp_Head{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.PopUp_Body{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PopUp_Bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    width: 207px;
+    height: 35px;
+
+}
+
+.PopUpInterior{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.PopUp_Labels{
+    /* padding: 4px 25px; */
+    width: 103px;
+    height: 27px;
+    background-color: #FF7A00;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PopUp_Headline{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    color: #2A3647;
+}
+
+.PopUp_Task{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    /* padding-top: 5px;
+    padding-bottom: 10px; */
+
+}
+
+.PopUp_DueDate_1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.PopUp_DueDate_2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.PopUp_Assign_1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.PopUp_Assign_1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+/* .PopUp_StatusAccomplished{
+    width: 51px;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.PopUp_PriorityClass{
+    
+} */
+
+.edit button {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    right: 50px;
+    bottom: 50px;
+    background: #2A3647;
+    border-radius: 10px;
+
+}
+
+.d-none {
+    display:none;
+}
+
+.d-on{
+    display: flex;
+}

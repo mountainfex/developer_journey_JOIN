@@ -28,6 +28,7 @@
     /* height: 1024px; */
     max-height: 100%;
     background: #F6F7F8;
+    
 }
 .contact-header{
     display: flex;
@@ -36,8 +37,9 @@
     align-items: center;
     padding-top: 50px;
     padding-left: 50px;
+    padding-bottom: 50px;
     gap: 30px;
-    
+    user-select: none;
     width: 569px;
     height: 73px;
     left: 743px;
@@ -94,13 +96,44 @@
     border: 1px solid #2A3647;
     border-radius: 10px;
 }
+.contact-bar-scroll{
+    overflow: auto;
+    text-align:justify;
+    max-height: 790px;
+    background-color: white;  
+}
+.contact-bar-scroll::-webkit-scrollbar-button{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* .contact-bar-scroll::-webkit-scrollbar-button:horizontal:increment{
+    background-image: url(assets/img/icon-dropdown.svg);
+} */
+.contact-bar-scroll::-webkit-scrollbar-button:vertical:increment{
+    background-image: url(assets/img/scroll-icon-down.svg);
+}
+.contact-bar-scroll::-webkit-scrollbar-button:vertical:decrement{
+    background-image: url(assets/img/icon-arrow-up-scroll.svg);
+}
+.contact-bar-scroll::-webkit-scrollbar{
+    width: 10px;
+}
+.contact-bar-scroll::-webkit-scrollbar-track{
+    background: #FFFFFF;
+}
+.contact-bar-scroll::-webkit-scrollbar-thumb{
+    border: 3px solid #ffffff;
+    border: 7px solid #A8A8A8;
+    border-radius: 3px;
+}
 .contact-list{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     /* position: absolute; */
-    width: 357px;
+    width: 360px;
     height: 1072px;
     left: 48px;
     top: 2px;
@@ -130,7 +163,63 @@
 }
 .contact-list-order{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+    gap: 35px;
+    width: 310px;
+    /* height: 79px; */
+    background: #FFFFFF;
+    border-radius: 10px;
+    
 }
+.contact-list-order span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.contact-list-order a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    color: #007CEE;
+}
+.contact-list-content{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: white;
+    font-family: 'Inter';
+    width: 310px;
+    padding: 10px;
+}
+.contact-list-content:hover{
+    background: #2A3647;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    
+
+}
+.contact-list-content:hover span{
+    background: #2A3647;
+    border-radius: 10px;
+    color: white;
+    
+
+}
+
 .contact-initials{
     display: flex;
     flex-direction: row;
@@ -143,12 +232,179 @@
     background: #FFFFFF;
     border-radius: 45px;
     box-sizing: border-box;
-   
     width: 42px;
     height: 42px;
     left: 0px;
     top: 0px;
     background: #FF7A00;
     border: 1px solid #FFFFFF;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
+.contact-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    width: 199px;
+    height: 49px;
+}
+.contact-selection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    padding-left: 50px;
+    gap: 21px;
+    /* position: absolute; */
+    width: 461px;
+    height: 364px;
+    left: 750px;
+    top: 326px;
+}
+.contact-selecetion-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 13px;
+
+    width: 287px;
+    height: 88px;
+}
+.contact-sel-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+.contact-sel-content span{
+    width: 287px;
+    height: 56px;
+    /* Version 2/t2 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.contact-selection-initials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 70px;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+.contact-add-task{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0px;
+    gap: 13px;
+    width: 128px;
+    height: 19px;
+    cursor: pointer;
+}
+/* .contact-add-task:hover{
+    color: #000000;
+} */
+.contact-add-task span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    color: #29ABE2;   
+}
+.contact-information-edit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 59px;
+    width: 100%;
+    height: 74px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #000000;    
+}
+.contact-information-edit span{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+.contact-information-edit-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 6px;
+    width: 126.85px;
+    height: 29.34px;
+    
+}
+.contact-information-edit-button span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #2A3647;
+}
+.contact-information-mailphone{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 22px;
+    width: 140px;
+    height: 128px;
+    font-family: 'Inter';
+    font-style: normal;
+    
+    line-height: 120%;
+    /* or 19px */
+    color: #000000;
+}
+.contact-information-mailphone span{
+    font-weight: 700;
+    font-size: 16px;
+}
+.contact-information-mailphone a{
+    color: #007CEE;
+    text-decoration: none;
+}
+.phone{
+    color: #000000 !important;
+    text-decoration: none;
+}
+.contact-information-mailphone a:hover{
+    color: darkblue;
+    text-decoration: underline;
 
 }
