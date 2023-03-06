@@ -11,6 +11,9 @@ body {
 .boxMajor {
     background-color: aqua;
     position: relative;
+    width: 100vw;
+    height: 100vh;
+
 
 }
 
