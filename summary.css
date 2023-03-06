@@ -6,13 +6,12 @@
     background: #F5F5F5;
 }
 .main{
-    padding: 100px;
-   
-
-}
-.summary-main{
+    padding: 40px;
     padding-left: 100px;  
 }
+/* .summary-main{
+    
+} */
 .summary-header{
     display: flex;
     flex-direction: row;
