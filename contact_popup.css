@@ -8,11 +8,11 @@
 .popUpBackground {
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -339,5 +339,54 @@ input[type=number] {
 .button:active img {
     filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
 }
+
+/* .dnone {
+    display: none;
+}
+
+.slidein{
+    display: flex !important;
+    animation: slide-in 600ms ease-in-out;
+}
+
+.slideout {
+    animation: slide-out 600ms ease-in-out;
+} */
+
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-out {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 

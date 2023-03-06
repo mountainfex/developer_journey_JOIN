@@ -76,7 +76,7 @@
 }
 
 .button {
-    position: absolute;
+    /* position: absolute; */
         /* Secondary contact V1*/
     box-sizing: border-box;
     /* Auto layout */
@@ -88,7 +88,7 @@
     gap: 10px;
     width: 193px;
     height: 53px;
-    right: 30%;
+    right: 5%;
     bottom: 10%;
     background: #2A3647;
     border: none;

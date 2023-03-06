@@ -15,5 +15,5 @@ let msgBox = document.getElementById("msgBox");
 if(msg){
     msgBox.innerHTML = msg;
 } else {
-    //display:none;
+    document.getElementById("msgBox").classList.add("dnone");
 }
