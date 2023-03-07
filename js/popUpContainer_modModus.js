@@ -64,21 +64,3 @@ function priorityGreen() {
         yellow.classList.add('PopUpMM_Priority_Labels_white');
 
 }
-
-// function priorityYellow() {
-//         let red = document.getElementById('PopUpMM_Priority_Labels_red');
-//         let yellowow = document.getElementById('PopUpMM_Priority_Labels_yellow');
-//         let green = document.getElementById('PopUpMM_Priority_Labels_green');
-//         let medium_img = document.getElementById('medium_img');
-//         let yello1 = yellow [0];
-//         let yello2 = yellow [1];
-        
-//         let urgent_img = document.getElementById('urgent_img');
-
-//         yellow.classList.toggle("PopUpMM_Priority_Labels_yellow");
-//         medium_img.toggle.("assets/img/Capa 1_equals_evenWhite.svg");
-//         medium_img.src="assets/img/Capa 1_equals_evenWhite.svg";
-//         red.classList.remove('PopUpMM_Priority_Labels_red');
-//         green.classList.remove('PopUpMM_Priority_Labels_green');
-
-// }
