@@ -4,35 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOIN - PopUpContainer</title>
+    <title>JOIN - PopUpContainer_modModus</title>
     
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="popUpContainer_modModus.js"></script>
     <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
 
 <script>
-    function priorityRed() {
-        let red = document.getElementById('PopUpMM_Priority_Labels_red');
-        let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
-        let green = document.getElementById('PopUpMM_Priority_Labels_green');
-        let urgent_img = document.getElementById('urgent_img');
-        
-        red.classList.add('PopUpMM_Priority_Labels_red');
-        urgent_img.src="assets/img/prio_white arrows.svg";
-        yellow.classList.remove('PopUpMM_Priority_Labels_yellow');
-        green.classList.remove('PopUpMM_Priority_Labels_green');
-
-}
-
- function priorityYellow() {
-        let red = document.getElementById('PopUpMM_Priority_Labels_red');
-        let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
-        let green = document.getElementById('PopUpMM_Priority_Labels_green');
-
-        yellow.classList.remove('PopUpMM_Priority_Labels_white');
-        yellow.classList.add('PopUpMM_Priority_Labels_white');
-
-}
-    </script>
+  
+</script>
 
 </head>
 <body>
@@ -61,9 +41,9 @@
                         <div class="PopUpMM_Priority">Priority</div>
                         <div class="PopUpMM_Priority_Labels">
                             
-                            <button onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
-                            <button onclick="" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img src="assets/img/prio-medium.svg"></button>
-                            <button onclick="" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img src="assets/img/prio-low.svg"></button>
+                            <button onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_white">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
+                            <button onclick="priorityYellow()" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img id="medium_img" src="assets/img/prio-medium.svg"></button>
+                            <button onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
                         </div>      
                 </div>
 
