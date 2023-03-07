@@ -195,3 +195,102 @@ body {
   align-items: center;
   height: 84px;
 }
+
+
+
+
+
+.btn-1 {
+  width: 150px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px;
+  color: #1E3190;
+  margin: 0 24px 0 24px;
+  transition: all 125ms ease-in-out;
+}
+
+.btn-1:hover {
+  transition: all 125ms ease-in-out;
+  color: white;
+  background-color: red;
+  border: 2px solid lightgray;
+  cursor: pointer;
+}
+
+.btn-1:active {
+  transition: all 125ms ease-in-out;
+  color: #1E3190;
+  background-color: white;
+  border: 2px solid #1E3190;
+}
+
+.btn-1:hover~.btn-2 {
+  transition: all 175ms ease-in-out;
+  color: transparent;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transform: scale(0%);
+}
+
+.btn-2 {
+  width: 150px;
+  border: 2px solid transparent;
+  background-color: #1E3190;
+  border-radius: 10px;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px;
+  color: white;
+  margin: 0 0 0 24px;
+  transition: all 125ms ease-in-out;
+}
+
+.btn-2:hover {
+  background-color: white;
+  border: 2px solid #1E3190;
+  color: #1E3190;
+  transition: all 125ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn-2:active {
+  background-color: #6b718c;
+  border: 2px solid #1E3190;
+  color: #1E3190;
+  transition: all 125ms ease-in-out;
+}
+
+.popup-container {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F4F3FB;
+  animation: popup 225ms ease-in-out;
+  border-radius: 10px;
+  border: 2px solid #F4F3FB;
+}
+
+
+.d-none {
+  display: none !important;
+}
