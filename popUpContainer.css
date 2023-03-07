@@ -81,9 +81,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: row;
-    align-items: flex-start;
-    padding: 4px 36.5px; */
     margin-bottom:30px;
     gap: 10px;
 
@@ -98,28 +95,18 @@ body {
     font-weight: 400;
     font-size: 27px;
     line-height: 120%;
-    /* or 32px */
-
-
     color: #FFFFFF;
 }
 
 .PopUp_Headline{
     width: 523px;
     height: 146px;
-    
-    /* Version 2/t1 */
-    
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 61px;
     line-height: 120%;
-    /* or 73px */
-    
-    
-    /* Version 2/ main color */
-    
     color: #2A3647;
     margin-bottom:30px;
 }
@@ -164,6 +151,7 @@ body {
 .PopUp_Body_mid{
     display: flex;
     align-items: flex-start;
+    justify-content: center;    
     margin-bottom: 20px;
 }
 
@@ -174,6 +162,31 @@ body {
     font-size: 21px;
     line-height: 120%;
     color: #000000;
+}
+
+.PopUp_Priority_Label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    gap: 10px;
+
+    width: 131px;
+    height: 33px;
+
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    /* font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    background: #FF3D00;
+    color: white; */
+
 }
 
 .PopUp_Body_sub{
