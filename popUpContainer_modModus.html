@@ -7,43 +7,50 @@
     <title>JOIN - PopUpContainer</title>
     
     <link rel="stylesheet" href="assets/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="popUpContainer.css">
+    <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
 
 
 </head>
 <body>
     
 
-    <div class="popUpBackground">
-        <div class="PopUpContainer">
+    <div class="popUpModModus_Background">
+        <div class="PopUpContainerModModus">
             <img class="xicon" src="assets/img/icon-x.svg" alt="">
     
-            <div class="PopUpInterior">
-                <div class="PopUp_Head">
-                    <div class="PopUp_Labels">Sales</div>
-                    <div class="PopUp_Headline">Call potential Clients</div>
-                    <div class="PopUp_Task">Make the product presentation to prospective buyers</div>
+            <div class="PopUpMM_Interior">
+                <div class="PopUpModModus_Head">
+                   
+                    <div class="PopUpMM_title">Title</div>
+                    <input id="PopUpMM_title" placeholder="Enter a title">
+                    
+                    <div class="PopUpMM_Description">Description</div>
+                    <textarea id="PopUpMM_Description_textarea" placeholder="Enter a description"></textarea>
                     
                 </div>
-                <div class="PopUp_Body">
-                    <div class="PopUp_Body_top">
-                        <div class="PopUp_DueDate_1">Due Date:</div>
-                        <div class="PopUp_DueDate_2">05-08-2022</div>
-                    </div>
-                    <div class="PopUp_Body_mid">
-                        <div class="PopUp_Priority">Priority:</div>
-                        <div class="PopUp_Priority_Label"><img class="PopUp_Priority_Label_imgs" src="assets/img/cardUrgent.png"></div>
-                    </div>
-                    <div class="PopUp_Body_sub">
-                        <div class="PopUp_Assign_title">Assigned to:</div>
-                        
-                    </div>
+
+                <div class="PopUpModModus_Body">
+                    
+                        <div class="PopUpMM_DueDate_1">Due Date</div>
+                        <input type="date" id="PopUpMM_dueDate">
+                                            
+                        <div class="PopUpMM_Priority">Priority</div>
+                        <div class="PopUpMM_Priority_Labels">
+                            
+                            <button onclick="" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_red">Urgent<img src="assets/img/prio-urgent.svg"></button>
+                            <button onclick="" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_yellow">Medium<img src="assets/img/prio-medium.svg"></button>
+                            <button onclick="" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_green">Low<img src="assets/img/prio-low.svg"></button>
+                        </div>      
                 </div>
-                <div class="PopUp_Bottom">
-                    <div class="PopUp_Assign_people">
-                        <div class="PopUp_Assign_people_logo">DE</div>
-                        <div class="PopUp_Assign_people_names">David Eisenberg</div>
-                    </div>
+
+                <div class="PopUpModModus_Bottom">
+                    <div class="PopUpMM_Assign_title">Assigned to</div>
+                    <select>
+                        <option>Select contacts to assign</option>
+                        <option>David Eisenberg</option>
+                        <option>empty_no Array</option>
+                    </select>
+                    <div id ="PopUpMM_Assign_PeopleLogo" class="PopUpMM_Assign_PeopleLogo"></div>
                 </div>
 
                 <div>
