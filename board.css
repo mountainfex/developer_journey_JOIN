@@ -215,7 +215,7 @@ body {
 
 .postIt {
     width: 250px;
-    height: 239px;
+    /* height: 239px; */
     background: #FFFFFF;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
