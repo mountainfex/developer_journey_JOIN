@@ -219,10 +219,9 @@ body {
     align-items: center;
     padding: 18px 10px;
     gap: 10px;
-
-    width: 130px;
+    /* background-color: #FFFFFF; */
+    min-width: 130px;
     height: 51px;
-    background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     border: none;
@@ -350,4 +349,20 @@ body {
 
 .d-on{
     display: flex;
+}
+
+.PopUpMM_Priority_Labels_white {
+    background-color: white;
+}
+
+.PopUpMM_Priority_Labels_red {
+    background-color: #ff3d00;
+}
+
+.PopUpMM_Priority_Labels_yellow {
+    background-color: #ffa800;
+}
+
+.PopUpMM_Priority_Labels_green {
+    background-color: #7ae229;
 }
