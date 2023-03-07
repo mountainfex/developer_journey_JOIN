@@ -14,7 +14,7 @@ body {
 }
 
 .workSpace {
-    width: 76%;
+    
     /* position: absolute; */
     right: 0px;
     top: 89px;
@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
-    margin-right: 4%;
+    padding-right: 4%;
     background-color: #f6f7f8;
     z-index: 0;
 }
@@ -219,8 +219,8 @@ body {
 .postIt {
     padding: 18px 19px;
     gap: 10px; 
-    width: 250px;
-    height: 239px;
+    width: 200px;
+    height: 200px;
     background: #FFFFFF;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
@@ -302,6 +302,36 @@ body {
     line-height: 120%;
     color: #000000;
 }
+
+.postIt_Staff{
+
+}
+
+.contact_initials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 42px;
+    height: 42px;
+    background: #FFFFFF;
+    border-radius: 45px;
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    top: 0px;
+    background: #FF7A00;
+    border: 1px solid #FFFFFF;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
+
 
 /* .postIt_PriorityClass{
     
