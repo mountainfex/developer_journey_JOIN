@@ -2,6 +2,8 @@
 
 body {
   margin: 0;
+  font-family: "Inter";
+  font-style: normal;
 }
 
 * {
@@ -26,7 +28,11 @@ body {
   height: 78px;
   left: 355px;
   top: 171px;
-}
+
+  font-weight: 700;
+  font-size: 61px;
+  line-height: 120%;
+  }
 
 .frame-38 {
   display: flex;
@@ -56,9 +62,6 @@ body {
 .title {
   width: 65px;
   height: 25px;
-}
-
-.title p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -79,15 +82,19 @@ body {
   border: 1px solid #d1d1d1;
   border-radius: 10px;
   box-sizing: border-box;
-}
 
-.frame-14 p {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 120%;
+  color: #000000;
+}
+
+.frame-14::placeholder {
   color: #d1d1d1;
+}
+
+.frame-14:focus {
+  outline: none;
 }
 
 .description {
@@ -128,20 +135,26 @@ body {
   background: #ffffff;
   border: 1px solid #d1d1d1;
   border-radius: 10px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  color: #000000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
 }
 
-.enter-description {
-  width: 190px;
-  height: 25px;
-}
-
-.enter-description p {
+.frame-17::placeholder {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 120%;
   color: #d1d1d1;
+}
+
+.frame-17:focus{
+  outline: none;
 }
 
 .category {
@@ -153,11 +166,6 @@ body {
 
   width: 422px;
   height: 104px;
-}
-
-.category-title {
-  width: 93px;
-  height: 25px;
 }
 
 .category-title p {
@@ -175,9 +183,6 @@ body {
   align-items: flex-start;
   padding: 0px;
 
-  width: 422px;
-  height: 51px;
-
   border-radius: 10px;
 }
 
@@ -187,28 +192,40 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 21px;
   gap: 10px;
   isolation: isolate;
 
   width: 422px;
   height: 51px;
-  background: #ffffff;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background: url(assets/img/icon-dropdown.svg);
+  background-position: 98% center;
+  background-repeat: no-repeat;
+  outline: none;
 }
 
-.select-category {
-  width: 205px;
-  height: 25px;
+/* #selectCategory:hover{
+  background: #D1D1D1 !important;
 }
 
-.select-category p {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 120%;
-  color: #000000;
+#selectCategory option{
+  background: red;
 }
+
+#selectCategory option:hover{
+  background: green !important;
+} */
+
+
+
+/* .frame-14 option:hover {
+  background-color: #D1D1D1 ;
+  
+} */
 
 .frame-15 {
   display: flex;
@@ -321,7 +338,6 @@ body {
   flex-direction: column;
   align-items: flex-end;
   padding: 0px;
-  gap: 175px;
 
   position: absolute;
   width: 422px;
@@ -352,9 +368,14 @@ body {
   height: 104px;
 }
 
-.due-date-title {
-  width: 91px;
-  height: 25px;
+.due-date input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(assets/img/icon-date-picker.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
 }
 
 .due-date-title p {
@@ -380,14 +401,7 @@ body {
   background: #ffffff;
   border: 1px solid #d1d1d1;
   border-radius: 10px;
-}
 
-.date-input {
-  width: 125px;
-  height: 25px;
-}
-
-.date-input p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
