@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./assets/templates/Navbar.js"></script>
+    <script src="./js/add_task.js"></script>
     <link rel="stylesheet" href="add_task.css" />
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
     <title>Add Task</title>
@@ -12,73 +13,119 @@
   <body onload="includeHTML()">
     <div w3-include-html="assets/templates/Navbar.html"></div>
 
+    <div class="main">
+        <div class="inner-main">
+            <p>Add Task</p>
+        </div>
+        <div class="frame-38">
+            <p class="title">Title</p>
+            <input class="frame-14" type="text" placeholder="Enter a title">
 
-      
-    <main>
-        <div class="content-container">
-            <div class="content-container-title">
-                <h1>Add Task</h1>
+            <div class="description">
+                <div class="description-title">
+                    <p>Description</p>
+                </div>
+                <textarea class="frame-17" placeholder="Enter a Description" id=""></textarea>
             </div>
-            <div class="task-container">
-                <div class="task-container-content">
-                    <form onsubmit="checkForm(); return false">
-                        <div class="form-left">
-                            <div class="task-title">
-                                <label class="title-label">TITLE</label>
-                                <input required type="text" id="title" required>
-                            </div>
-                            <div class="form-category">
-                                <label class="title-label">CATEGORY</label>
-                                <select required name="Tasks" id="tasks" required>
-                                    <option value="">-- Select task --</option>
-                                    <option value="management">Management</option>
-                                    <option value="programming">Programming</option>
-                                    <option value="design">Design</option>
-                                </select>
-                            </div>
-                            <div class="form-description">
-                                <label class="title-label">DESCRIPTION</label>
-                                <textarea required type="text" id="description" rows="6" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-right">
-                            <div class="form-due-date">
-                                <label class="title-label">DUE DATE</label>
-                                <input type="date" id="dueTo" required>
-                            </div>
-                            <div class="form-urgency">
-                                <label class="title-label">URGENCY</label>
-                                <select name="Tasks" id="urgency" required>
-                                    <option value="low">Low</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="high">High</option>
-                                </select>
-                            </div>
-                            <div class="form-assigned-to">
-                                <label class="title-label">ASSIGNED TO</label>
-                                <div class="content-assigned-to">
-                                    </div>
-                                    <div class="assigned-to-user-img">
-                                        <img id="userSelectionBtn" onclick="openUserSelection()" class="assigned-to-user-img-add-user" src="./assets/img/icon-add-plus.svg">
-                                        <div>
-                                            <div id="assignedUserContainer" class="assigned-user-container"></div>
-                                        </div>
-                                        <div id="userSelectionContainer" class="user-selection-container d-none">
-                                            <div id="userSelection" class="user-selection-content">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="assigned-to-buttons">
-                                    <button onclick="reloadPage()" class="btn-1">CANCEL</button>
-                                    <button class="btn-2">CREATE TASK</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+
+            <div class="category">
+                <div class="category-title">
+                    <p>Category</p>
+                </div>
+                <div class="frame-72">
+                    <select class="frame-14" id="">
+                        <option value="" disabled selected>Select task category</option>
+                        <option value="">Backoffice</option>
+                        <option value="">Sales</option>
+                        <option value="">Design</option>
+                        <option value="">Media</option>
+                        <option value="">Marketing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <p>Assigned to</p>
+                </div>
+                <div class="frame-72">
+                    <select class="frame-14" id="selectCategory">
+                        <option disabled selected>Select contacts to assign</option>
+                        <option>Anton Meyer</option>
+                        <option>Anja Schulz</option>
+                        <option>David Eisenberg</option>
+                        <option>Eva Fischer</option>
+                        <option>Albert Einstein</option>
+                    </select>
                 </div>
             </div>
         </div>
-    </main>
+
+        <div class="frame-43">
+            <div class="frame-39">
+                <div class="due-date">
+                    <div class="due-date-title">
+                        <p>Due date</p>
+                    </div>
+                     <input class="date-field" type="date">
+
+                        <!-- <div class="calender-fill">
+                            <img src="assets/img/icon-date-picker.svg" alt="">
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="frame-28">
+                    <div class="prio-title">
+                        <p>Prio</p>
+                    </div>
+
+                    <div class="PopUpMM_Priority_Labels">
+                            
+                        <button onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_white">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
+                        <button onclick="priorityYellow()" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img id="medium_img" src="assets/img/prio-medium.svg"></button>
+                        <button onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
+                    </div>      
+                </div>
+
+                <div class="subtasks">
+                    <div class="subtasks-title">
+                        <p>Substasks</p>
+                    </div>
+                        <input class="add-new-subtask-field" type="text" placeholder="Add new subtask">
+                        <!-- <div class="frame-36">
+                            <img src="assets/img/icon-add-plus-dark.svg" alt="">
+                        </div> -->
+
+                        <div class="subtasksCheckbox">
+                            <img src="assets/img/icon-check-empty.svg" alt="">
+                            <p class="check-subtask-title">Subtask 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+        <!-- Trennung Linie -->
+        <div class="line"></div>
+        <!-- Trennung End -->
+
+
+        <div class="frame-35">
+            <div class="frame-27">
+                <div class="clear-btn">
+                    <p>Clear</p>
+                    <img src="assets/img/icons-cancel.svg" alt="">
+                </div>
+                <div class="create-btn">
+                    <p>Create Task</p>
+                    <img src="assets/img/icon-check-dark.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    
   </body>
 </html>

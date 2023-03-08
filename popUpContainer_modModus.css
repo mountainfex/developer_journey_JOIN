@@ -115,6 +115,10 @@ body {
 
 }
 
+.PopUpModModus_Head input:focus {
+    outline: none;
+}
+
 .PopUpMM_Description{
     font-family: 'Inter';
     font-style: normal;
@@ -148,6 +152,10 @@ body {
     font-size: 21px;
     line-height: 120%;
     color: #000000;
+}
+
+.PopUpModModus_Head textarea:focus{
+    outline: none;
 }
 
 .PopUpMM_DueDate_1{
@@ -185,6 +193,20 @@ body {
     color: #000000;
     margin-bottom: 20px;
 }
+
+.PopUpModModus_Body input:focus {
+    outline: none;
+}
+
+.PopUpModModus_Body input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(assets/img/icon-date-picker.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
 
 .PopUpMM_Priority{
     font-family: 'Inter';
@@ -288,6 +310,14 @@ body {
     background: #FFFFFF;
     border-radius: 10px;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: url(assets/img/icon-dropdown.svg);
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    outline: none;
 }
 
 .PopUpMM_Assign_PeopleLogo {

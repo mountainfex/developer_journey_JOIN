@@ -41,7 +41,7 @@
                         <p>To do</p>
                         <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
                     </div>
-                    <div onclick="openPopUpContainer()" class="postIt">
+                    <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
                         <div class="postItInterior">
                             <div class="postIt_Head">
                                 <div class="postIt_Labels">Design</div>
@@ -135,9 +135,9 @@
 
     </div>
 
-    <div id="popUpBackground" class="popUpBackground d-none">
-        <div id="PopUpContainer" class="PopUpContainer d-none">
-            <img onclick="closePopUpContainer()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
+    <div id="popUpBackground" class="popUpBackground">
+        <div id="PopUpContainer" class="PopUpContainer">
+            <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
     
             <div class="PopUpInterior">
                 <div class="PopUp_Head">
