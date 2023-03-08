@@ -10,9 +10,13 @@ body {
   margin: 0;
 }
 
+input:focus {
+  outline: none;
+}
+
 .main {
-  width: 1440px;
-  height: 1024px;
+  width: 100%;
+  height: 100%;
   background: #f6f7f8;
 }
 
@@ -40,6 +44,7 @@ body {
   align-items: flex-start;
   padding: 0px;
   gap: 14px;
+  
 
   position: absolute;
   width: 422px;
@@ -78,10 +83,10 @@ body {
   gap: 10px;
   width: 422px;
   height: 51px;
-  background: #ffffff;
   border: 1px solid #d1d1d1;
   border-radius: 10px;
   box-sizing: border-box;
+  background-color: white !important;
 
   font-weight: 400;
   font-size: 21px;
@@ -142,6 +147,8 @@ body {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
+
+  resize: none;
 }
 
 .frame-17::placeholder {
@@ -359,7 +366,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 8px;
+  gap: 14px;
 
   width: 422px;
   height: 104px;
@@ -538,21 +545,15 @@ body {
   height: 51px;
   background: #ffffff;
   border: 1px solid #d1d1d1;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-}
 
-.subtask-input {
-  width: 178px;
-  height: 25px;
-}
-
-.subtask-input p {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 120%;
+  color: #000000;
+}
+
+.add-new-subtask-field::placeholder{
   color: #d1d1d1;
 }
 
@@ -568,18 +569,15 @@ body {
   height: 19px;
 }
 
-.rectangle-6 {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
+.subtasksCheckbox {
+  display: flex ;
+  align-items: center;
+  gap: 5px;
 }
 
 .check-subtask-title {
   width: 74px;
   height: 19px;
-}
-
-.check-subtask-title p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
