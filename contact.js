@@ -23,12 +23,6 @@
 // 	}
 // });
 
-let openbutton = document.getElementById("openBtn");
-let closebutton = document.getElementById("closeBtn");
-let popUpContact = document.getElementById("mainPopUp");
-let popup = document.getElementById("popup");
-
-
 function slideIn(){
     let popup = document.getElementById("popup");
     let popUpContact = document.getElementById("mainPopUp");
