@@ -198,6 +198,16 @@ body {
     outline: none;
 }
 
+.PopUpModModus_Body input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(assets/img/icon-date-picker.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
+
 .PopUpMM_Priority{
     font-family: 'Inter';
     font-style: normal;
