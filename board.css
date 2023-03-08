@@ -13,11 +13,9 @@ body {
 
 }
 
-.workSpace {    
-    position: absolute;
+.workSpace { 
     margin-left: 232px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding-left: 5%;
