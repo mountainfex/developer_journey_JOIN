@@ -337,7 +337,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0px;
+  gap: 15px;
 
   position: absolute;
   width: 422px;
@@ -350,11 +350,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  gap: 14px;
 
   width: 422px;
-  height: 356px;
 }
 
 .due-date {
@@ -444,7 +441,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 25px;
   gap: 10px;
 
   width: 131px;
