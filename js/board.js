@@ -1,8 +1,8 @@
 
-let openbutton = document.getElementById("openPopUpContainer");
-let closebutton = document.getElementById("closePopUpContainer");
-let PopUpContainer = document.getElementById("PopUpContainer");
-let popUpBackground = document.getElementById("popUpBackground");
+// let openbutton = document.getElementById("openPopUpContainer");
+// let closebutton = document.getElementById("closePopUpContainer");
+// let PopUpContainer = document.getElementById("PopUpContainer");
+// let popUpBackground = document.getElementById("popUpBackground");
 
 // function openPopUpContainer() {
 //     let popUpBackground = document.getElementById('popUpBackground');
@@ -45,8 +45,9 @@ function slideIn(){
 function slideOut() {
     let popUpBackground = document.getElementById("popUpBackground");
     let PopUpContainer = document.getElementById("PopUpContainer");
-    PopUpContainer.classList.add('slideout');
+    popUpContainer.classList.add('slideout');
     popUpBackground.classList.add('fadeout');
     setTimeout(function(){document.getElementById('popUpBackground').classList.add('dnone')}, 500);
-    setTimeout(function(){document.getElementById('PopUpContainer').classList.add('dnone')}, 500);
+    setTimeout(function(){document.getElementById('popUpContainer').classList.add('dnone')}, 500);
 }
+

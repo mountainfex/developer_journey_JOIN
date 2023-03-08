@@ -131,12 +131,11 @@ function openContact(i){
     console.log(contact);
     let contactopen = document.getElementById('contact-selection');
     contactopen.innerHTML = "";
-    contactopen = renderOpenContact(contact);
+    contactopen.innerHTML = renderOpenContact(contact);
 }
 
 function renderOpenContact(contact){
-    return`
-    
+    return`    
                     <div class="contact-sel-content">
                         <div class="contact-selection-initials" style="background: #FF7A00;">${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
                         </div>
@@ -160,9 +159,7 @@ function renderOpenContact(contact){
                         <a href="mailto: ${contact["email"]}">${contact["email"]}</a>
                         <span>Phone</span>
                         <a href="${contact["phone"]}" class="phone">${contact["phone"]}</a>
-                    </div>
-
-    
+                    </div>   
     
     `;
 }

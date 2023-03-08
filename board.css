@@ -13,13 +13,12 @@ body {
 
 }
 
-.workSpace {
-    
-    /* position: absolute; */
-    right: 0px;
-    top: 89px;
+.workSpace {    
+    position: absolute;
     margin-left: 232px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding-left: 5%;
     padding-right: 4%;
@@ -347,16 +346,13 @@ body {
     position: fixed;
     justify-content: center;
     align-items: center;
-    z-index: 5;
-    
+    top: 0;
 }
 
 .PopUpContainer{
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     position: relative;
-    display: none;
-    z-index: 6;
-    
+    display: flex;    
     flex-direction: column;
     align-items: flex-start;
     padding: 30px;
@@ -628,14 +624,9 @@ body {
     filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
 }
 
-.d-none {
+.dnone {
     display:none !important;
 }
-
-.d-on{
-    display: flex;
-}
-
 
 .slidein{
     display: flex ;
