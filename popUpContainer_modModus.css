@@ -115,6 +115,10 @@ body {
 
 }
 
+.PopUpModModus_Head input:focus {
+    outline: none;
+}
+
 .PopUpMM_Description{
     font-family: 'Inter';
     font-style: normal;
@@ -148,6 +152,10 @@ body {
     font-size: 21px;
     line-height: 120%;
     color: #000000;
+}
+
+.PopUpModModus_Head textarea:focus{
+    outline: none;
 }
 
 .PopUpMM_DueDate_1{
@@ -184,6 +192,10 @@ body {
     line-height: 120%;
     color: #000000;
     margin-bottom: 20px;
+}
+
+.PopUpModModus_Body input:focus {
+    outline: none;
 }
 
 .PopUpMM_Priority{
