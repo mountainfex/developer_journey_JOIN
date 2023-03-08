@@ -38,9 +38,6 @@ function slideIn(){
     popup.classList.remove('fadeout');
     popup.classList.add('fadein');
     popup.classList.remove('dnone');
-    
-
-
 } 
 
 function slideOut() {
