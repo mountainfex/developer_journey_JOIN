@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./assets/templates/Navbar.js"></script>
+    <script src="./js/add_task.js"></script>
     <link rel="stylesheet" href="add_task.css" />
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
     <title>Add Task</title>
@@ -81,20 +82,12 @@
                         <p>Prio</p>
                     </div>
 
-                    <div class="prios">
-                        <div class="urgent">
-                            <p>Urgent</p>
-                            <img src="assets/img/prio-urgent.svg" alt="">
-                        </div>
-                        <div class="urgent">
-                            <p>Medium</p>
-                            <img src="assets/img/prio-medium.svg" alt="">
-                        </div>
-                        <div class="urgent">
-                            <p>Low</p>
-                            <img src="assets/img/prio-low.svg" alt="">
-                        </div>
-                    </div>
+                    <div class="PopUpMM_Priority_Labels">
+                            
+                        <button onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_white">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
+                        <button onclick="priorityYellow()" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img id="medium_img" src="assets/img/prio-medium.svg"></button>
+                        <button onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
+                    </div>      
                 </div>
 
                 <div class="subtasks">

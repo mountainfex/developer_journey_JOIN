@@ -300,6 +300,14 @@ body {
     background: #FFFFFF;
     border-radius: 10px;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: url(assets/img/icon-dropdown.svg);
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    outline: none;
 }
 
 .PopUpMM_Assign_PeopleLogo {
