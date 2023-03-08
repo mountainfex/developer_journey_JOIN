@@ -137,7 +137,7 @@ function openContact(i){
     console.log(contact);
     let contactopen = document.getElementById('contact-selection');
     contactopen.innerHTML = "";
-    contactopen = renderOpenContact(contact);
+    contactopen.innerHTML = renderOpenContact(contact);
 }
 
 function renderOpenContact(contact){
@@ -156,7 +156,7 @@ function renderOpenContact(contact){
                     </div>
                     <div class="contact-information-edit">
                         <span>Contact Information</span>
-                        <div class="contact-information-edit-button">
+                        <div class="contact-information-edit-button" id="contact-information-edit-button${contact["id"]}" onclick="contact-information-edit-button(${contact["id"]})">
                             <img src="assets/img/pencil-no-bg.svg">
                             <span>Edit Contact</span>
                         </div>
