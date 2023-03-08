@@ -1,5 +1,33 @@
-    
-    function priorityRed() {
+let tasks = [];
+
+function pushTask () {
+        let title = document.getElementById('input_Title');
+        let description = document.getElementById('textarea_Description');
+        let label = document.getElementById('label_input_Select').value;
+        let staff = document.getElementById('staff_input_Select').value;
+        let dueDate = document.getElementById('dueDate_input_Select').value;
+        let priority = document.getElementById('urgent', 'middle', 'low');
+        let subtask = document.getElementById('subtask_input').value;
+
+        let data = {
+                titles: title,
+                descriptions: description,
+                labels: label,
+                Personell: staff,
+                Dates: dueDate,
+                Priorities: priority,
+                Subtasks: subtask,
+              };
+
+        tasks.push(data);
+        console.log('tasks');
+}
+
+
+        /*      Priority-BUTTONS       */
+
+        
+function priorityRed() {
         let red = document.getElementById('PopUpMM_Priority_Labels_red');
         let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
         let green = document.getElementById('PopUpMM_Priority_Labels_green');
@@ -20,6 +48,7 @@
         green.classList.add('PopUpMM_Priority_Labels_white');
         
 }
+
 
  function priorityYellow() {
         let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
@@ -42,6 +71,7 @@
         red.classList.add('PopUpMM_Priority_Labels_white');
 
 }
+
 
 function priorityGreen() {
         let green = document.getElementById('PopUpMM_Priority_Labels_green');
