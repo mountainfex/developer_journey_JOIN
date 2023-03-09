@@ -1,4 +1,33 @@
-let tasks = [];
+let tasks = [
+        {
+        "titles": "Neue Webseite - online Termin",
+        "descriptions": "Neue JavaScript Funktionen und Spezial-Effekte müssen noch eingebaut werden",
+        "labels": "design",
+        "Personell": "Front-End Developer",
+        "Dates": "2023-06-01",
+        "Priorities": "middle",
+        // "Subtasks": subtask,
+        },
+        {
+        "titles": "Präsentation",
+        "descriptions": "Produktpräsentation unseres neuen Produkts 'Pokemon-Sammelalbum' ",
+        "labels": "marketing",
+        "Personell": "Satoshi Nakamoto",
+        "Dates": "2023-05-01",
+        "Priorities": "urgent",
+        // "Subtasks": subtask,
+        },  
+        {
+        "titles": "Druckerpapier bestellen",
+        "descriptions": "20 Pakete mit 80g-Papier(recyclet)",
+        "labels": "backoffice",
+        "Personell": "Sebastian Grundig",
+        "Dates": "2023-04-21",
+        "Priorities": "low",
+        // "Subtasks": subtask,
+        }
+];
+
 let priority = [];
 
 function pushTask () {

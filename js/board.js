@@ -1,3 +1,41 @@
+// function renderPostit() {
+//     Postit = document.getElementById('dragNdrop_1_toDo');
+//     Postit.innerHTML = '';
+
+//     for (let i = 0; i < tasks.length; i++) {
+//         let task = tasks[i];
+//         Postit.innerHTML += templatePostit(task, i);
+//     }  
+// }
+/* wie können wir für die function renderPostit() von dieser js-Datei aus auf ein array in der Datei add_tasks.js zugreifen*/
+
+// function templatePostit (task, i) {
+//     return `
+//         <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
+//             <div class="postItInterior">
+//                 <div class="postIt_Head">
+//                     <div class="postIt_Labels">Design</div>
+//                     <div class="postIT_Headline">Webdesign redesign</div>
+//                     <div class="postIt_Task">Modify the contents of the main website...</div>
+//                 </div>
+//                 <div class="postIt_Body">
+//                     <div class="postIt_ProgressBar"><img src="assets/img/Frame 141.png"></div>
+//                     <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
+//                 </div>
+//                 <div class="postIt_Bottom">
+//                     <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
+//                     <div class="postIt_PriorityClass"><img src="assets/img/Frame 111.png"></div>
+//                 </div>
+//             </div>
+//         </div>
+//     `;
+// }
+
+// function renderPopUpTask () {
+
+// }
+
+
 function slideIn(){
     let popUpBackground = document.getElementById("popUpBackground");
     let popUpContainer = document.getElementById("popUpContainer");
@@ -10,6 +48,7 @@ function slideIn(){
 
 } 
 
+
 function slideOut() {
     let popUpBackground = document.getElementById("popUpBackground");
     let PopUpContainer = document.getElementById("PopUpContainer");
@@ -18,6 +57,7 @@ function slideOut() {
     setTimeout(function(){document.getElementById('popUpBackground').classList.add('dnone')}, 500);
     setTimeout(function(){document.getElementById('popUpContainer').classList.add('dnone')}, 500);
 }
+
 
 function renderPopUpContainer_modModus () {
     Container_modModus = document.getElementById('popUpBackground');
@@ -73,6 +113,7 @@ function renderPopUpContainer_modModus () {
 
 }
 
+
 function renderPopUpContainer() {
     regularPopUpContainer = document.getElementById('popUpBackground');
 
@@ -117,3 +158,5 @@ function renderPopUpContainer() {
     </div>
     `;
 }
+
+
