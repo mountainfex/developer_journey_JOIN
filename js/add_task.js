@@ -1,26 +1,27 @@
 let tasks = [];
+let priority = [];
 
 function pushTask () {
-        let title = document.getElementById('input_Title');
-        let description = document.getElementById('textarea_Description');
+        let title = document.getElementById('input_Title').value;
+        let description = document.getElementById('textarea_Description').value;
         let label = document.getElementById('label_input_Select').value;
         let staff = document.getElementById('staff_input_Select').value;
         let dueDate = document.getElementById('dueDate_input_Select').value;
-        let priority = document.getElementById('urgent', 'middle', 'low');
-        let subtask = document.getElementById('subtask_input').value;
+        // let subtask = document.getElementById('subtask_input').value;
+        let prio = priority;
 
         let data = {
-                titles: title,
-                descriptions: description,
-                labels: label,
-                Personell: staff,
-                Dates: dueDate,
-                Priorities: priority,
-                Subtasks: subtask,
+                "titles": title,
+                "descriptions": description,
+                "labels": label,
+                "Personell": staff,
+                "Dates": dueDate,
+                "Priorities": prio,
+                // "Subtasks": subtask,
               };
 
         tasks.push(data);
-        console.log('tasks');
+        console.log(tasks);
 }
 
 
@@ -28,6 +29,7 @@ function pushTask () {
 
         
 function priorityRed() {
+        priority = "urgent";
         let red = document.getElementById('PopUpMM_Priority_Labels_red');
         let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
         let green = document.getElementById('PopUpMM_Priority_Labels_green');
@@ -51,6 +53,7 @@ function priorityRed() {
 
 
  function priorityYellow() {
+        priority = "middle";
         let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
         let green = document.getElementById('PopUpMM_Priority_Labels_green');
         let red = document.getElementById('PopUpMM_Priority_Labels_red');
@@ -74,6 +77,7 @@ function priorityRed() {
 
 
 function priorityGreen() {
+        priority = "low";
         let green = document.getElementById('PopUpMM_Priority_Labels_green');
         let red = document.getElementById('PopUpMM_Priority_Labels_red');
         let yellow = document.getElementById('PopUpMM_Priority_Labels_yellow');
