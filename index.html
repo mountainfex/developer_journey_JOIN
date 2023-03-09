@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
-<<<<<<< HEAD
-    
-    <script src="js/login.js"></script> 
-=======
->>>>>>> 3d43465ea714fb8ac378d760bf048c340f52fdf9
+
     <script src="mini_backend/mini_backend.js"></script>
     <script src="js/login.js"></script> 
 
@@ -44,14 +40,14 @@
                 </div>
                 <div class="rememberMe">
                     <div class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" id="rememberMe">
                         <p>Remember me</p>
                     </div>
                     <a href="forgotpassword.html" class="forgot">Forgot my password</a>
                 </div>
                 <div class="btn">
-                    <button class="loginButton button">Log in</button>
-                    <button class="guestLoginButton borderButton">Guest Log in</button>
+                    <button class="loginButton button" onclick="lsRememberMe()">Log in</button>
+                    <button class="guestLoginButton borderButton" onclick="guestLogin()" >Guest Log in</button>
                 </div>
                 </form>
             </div>
