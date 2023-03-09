@@ -15,8 +15,8 @@
     
 
     <div id="background" class="popUpBackground">
-        <div class="PopUpContainer">
-            <img class="xicon" src="assets/img/icon-x.svg" alt="">
+        <div id="popUpContainer" class="PopUpContainer">
+            <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
     
             <div class="PopUpInterior">
                 <div class="PopUp_Head">
@@ -45,9 +45,9 @@
                         <div class="PopUp_Assign_people_names">David Eisenberg</div>
                     </div>
                 </div>
-
+    
                 <div>
-                    <button onclick="PopUpContainer_modModus ()" class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
+                    <button onclick="renderPopUpContainer_modModus ()" class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
                 </div>
             </div>
         </div>

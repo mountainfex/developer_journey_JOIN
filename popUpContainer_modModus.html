@@ -16,11 +16,11 @@
 
     <div class="popUpBackground">
         <div id="popUpContainer" class="PopUpContainer">
-            <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
+            <img onclick="slideOut(); renderPopUpContainer()" class="xicon" src="assets/img/icon-x.svg" alt="">
     
             <div class="PopUpMM_Interior">
                 <div class="PopUpModModus_Head">
-                   
+                
                     <div class="PopUpMM_title">Title</div>
                     <input id="PopUpMM_title" placeholder="Enter a title">
                     
@@ -28,7 +28,7 @@
                     <textarea id="PopUpMM_Description_textarea" placeholder="Enter a description"></textarea>
                     
                 </div>
-
+    
                 <div class="PopUpModModus_Body">
                     
                         <div class="PopUpMM_DueDate_1">Due Date</div>
@@ -42,7 +42,7 @@
                             <button onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
                         </div>      
                 </div>
-
+    
                 <div class="PopUpModModus_Bottom">
                     <div class="PopUpMM_Assign_title">Assigned to</div>
                     <select>
@@ -52,12 +52,13 @@
                     </select>
                     <div id ="PopUpMM_Assign_PeopleLogo" class="PopUpMM_Assign_PeopleLogo"></div>
                 </div>
-
+    
                 <div>
                     <button class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
                 </div>
             </div>
         </div>
+        
     </div>
 
 </body>
