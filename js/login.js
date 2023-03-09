@@ -52,3 +52,23 @@ function shakeElement() {
         passwwordShake.classList.remove("shake");
     }, 1000);
 }
+
+function slideIn(){
+    let popup = document.getElementById("popup");
+    let popUpContact = document.getElementById("mainPopUp");
+    popUpContact.classList.remove('slideout');
+    popUpContact.classList.add('slidein');
+    popUpContact.classList.remove("dnone");
+    popup.classList.remove('fadeout');
+    popup.classList.add('fadein');
+    popup.classList.remove('dnone');
+} 
+
+function slideOut() {
+    let popup = document.getElementById("popup");
+    let popUpContact = document.getElementById("mainPopUp");
+    popUpContact.classList.add('slideout');
+    popup.classList.add('fadeout');
+    setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 500);
+    setTimeout(function(){document.getElementById('mainPopUp').classList.add('dnone')}, 500);
+}
