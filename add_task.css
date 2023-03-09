@@ -12,7 +12,7 @@ body {
 
 input:focus {
   outline: none;
-}
+}y
 
 .main {
   width: 100%;
@@ -604,6 +604,8 @@ input:focus {
 }
 
 .frame-27 {
+  position: relative;
+  bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
