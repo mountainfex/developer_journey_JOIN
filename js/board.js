@@ -20,13 +20,13 @@ function slideOut() {
 }
 
 function PopUpContainer_modModus () {
-    Container_modModus = document.getElementById('background');
+    Container_modModus = document.getElementById('popUpBackground');
 
     Container_modModus.innerHTML = "";
     Container_modModus.innerHTML = `
-    
-        <div class="PopUpContainerModModus">
-        <img class="xicon" src="assets/img/icon-x.svg" alt="">
+
+        <div class="PopUpContainer">
+        <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
 
         <div class="PopUpMM_Interior">
             <div class="PopUpModModus_Head">
