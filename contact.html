@@ -69,7 +69,7 @@
                         <img src="assets/img/icon-user.svg" alt="">
                     </div>                    
                 </div>
-                <form onsubmit="" class="popUpAddContact">
+                <form onsubmit="addNewContact(); return false" class="popUpAddContact">
                     <div class="input">
                         <input  type="text" placeholder="Name" id="contact-popup-name">
                         <img src="assets/img/icon-user-grey.svg" alt="">
@@ -86,7 +86,7 @@
                         <button class="cancelBtn borderButton">Cancel
                             <img src="assets/img/icons-cancel.svg" alt="">
                         </button>
-                        <button class="createBtn " onclick="addNewContact()">Create Contact
+                        <button class="createBtn ">Create Contact
                             <img src="assets/img/icon-check-dark.svg" alt="">
                         </button>
                     </div>

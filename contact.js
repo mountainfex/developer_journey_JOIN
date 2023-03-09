@@ -19,6 +19,12 @@ function slideOut() {
     setTimeout(function(){document.getElementById('mainPopUp').classList.add('dnone')}, 500);
 }
 
+function slideInContact(){
+    let contactslidein = document.getElementById(`contact-selection`);
+    contactslidein.classList.add('slidein');
+    setTimeout(function(){document.getElementById('contact-selection').classList.remove('slidein')}, 500);
+    
+} 
 
 
 let contacts = [
@@ -117,7 +123,7 @@ function generateContactsList(){
 function renderContactlist(i, contact, firstletter){
     let contactlist = document.getElementById(`contact-list-order${firstletter}`);
     contactlist.innerHTML += `
-    <div class="contact-list-content" id="contact-list-content${i}" onclick="openContact(${i})">
+    <div class="contact-list-content" id="contact-list-content${i}" onclick="openContact(${i}); slideInContact()">
         <div class="contact-initials" id="contact-initials">${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
         </div>
         <div class="contact-name" id="contact-name">
@@ -186,6 +192,6 @@ function addNewContact(){
     
     contacts.push(newcontact);
     console.log(contacts);
-    // contactinit();
+    contactinit();
     
 }
