@@ -600,6 +600,7 @@ input:focus {
   height: 61px;
   left: 984px;
   top: 889px;
+  
 }
 
 .frame-27 {
@@ -612,28 +613,74 @@ input:focus {
 
   width: 338px;
   height: 61px;
+  
 }
 
 .clearBTN {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 136px;
-  height: 61px;
-  border: 1px solid #2a3647;
-  border-radius: 10px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 120%;
-  color: #2A3647;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+
+    width: 136px;
+    height: 61px;
+
+    /* Version 2/ main color */
+
+    background-color: #fff;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+
+
+    /* Version 2/ main color */
+
+    color: #2A3647;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    transition: 200ms;
 }
 
+.border:hover {
+  cursor: pointer;
+  color: #29ABE2;
+  border-color: #29ABE2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.border:hover img {
+  filter: invert(56%) sepia(67%) saturate(557%) hue-rotate(156deg) brightness(92%) contrast(92%);
+}
+
+.border:active {
+  cursor: pointer;
+  color: #091931;
+  border-color: #091931;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ 
+}
+
+.border:active img {
+  filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
+}
+
+
 .createBTN {
+ 
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -641,18 +688,44 @@ input:focus {
   padding: 18px 10px;
   gap: 10px;
 
-  width: 177px;
+  width: 208px;
   height: 61px;
 
   background: #2A3647;
   border-radius: 10px;
+  border: none;
 
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 120%;
+  /* or 25px */
   color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  transition: 200ms;
 
 }
 
+
+.createBTN img {
+  filter: invert(1);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #29ABE2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active{
+  background: #FFFFFF;
+  /* stronger */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #091931;
+}
+
+.btn:active img {
+  filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
+}
