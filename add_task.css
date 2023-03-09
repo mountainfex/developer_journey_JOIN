@@ -621,40 +621,40 @@ input:focus {
 .clearBTN {
   box-sizing: border-box;
 
-    /* Auto layout */
+  /* Auto layout */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 10px;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 10px;
+  gap: 10px;
 
-    width: 136px;
-    height: 61px;
+  width: 136px;
+  height: 61px;
 
-    /* Version 2/ main color */
+  /* Version 2/ main color */
 
-    background-color: #fff;
-    border: 1px solid #2A3647;
-    border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #2A3647;
+  border-radius: 10px;
 
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 120%;
-    /* or 25px */
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  /* or 25px */
 
 
-    /* Version 2/ main color */
+  /* Version 2/ main color */
 
-    color: #2A3647;
+  color: #2A3647;
 
-    /* Inside auto layout */
+  /* Inside auto layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    transition: 200ms;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  transition: 200ms;
 }
 
 .border:hover {

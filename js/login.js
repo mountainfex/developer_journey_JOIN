@@ -20,28 +20,6 @@ function guestLogin(){
     window.location.href = 'summary.html'
 }
 
-// let rmCheck = document.getElementById('rememberMe');
-// let email = document.getElementById('email');
-
-// if(backend.checkbox && backend.checkbox !== "") {
-// rmCheck.setAttribute("checked", "checked");
-// email.value = backend.email;
-// } else {
-// rmCheck.removeAttribute("checked");
-// email.value = "";
-// }
-
-
-// function lsRememberMe() {
-//     if (rmCheck.checked && email.value !== "") {
-//         backend.username = email.value;
-//         backend.checkbox = rmCheck.value;
-//     } else {
-//         backend.username = "";
-//         backend.checkbox = "";
-//     }
-//   }
-
 function shakeElement() {
     let mailShake = document.getElementById("emailShake");
     let passwwordShake = document.getElementById("passwordShake");
@@ -53,22 +31,5 @@ function shakeElement() {
     }, 1000);
 }
 
-function slideIn(){
-    let popup = document.getElementById("popup");
-    let popUpContact = document.getElementById("mainPopUp");
-    popUpContact.classList.remove('slideout');
-    popUpContact.classList.add('slidein');
-    popUpContact.classList.remove("dnone");
-    popup.classList.remove('fadeout');
-    popup.classList.add('fadein');
-    popup.classList.remove('dnone');
-} 
-
-function slideOut() {
-    let popup = document.getElementById("popup");
-    let popUpContact = document.getElementById("mainPopUp");
-    popUpContact.classList.add('slideout');
-    popup.classList.add('fadeout');
-    setTimeout(function(){document.getElementById('popup').classList.add('dnone')}, 500);
-    setTimeout(function(){document.getElementById('mainPopUp').classList.add('dnone')}, 500);
-}
+// let msgBox = document.getElementById('msgBox');
+// setTimeout(function(){msgBox.classList.add('dnone')}, 2000);
