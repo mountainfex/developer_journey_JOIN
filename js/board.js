@@ -25,8 +25,8 @@ function PopUpContainer_modModus () {
     Container_modModus.innerHTML = "";
     Container_modModus.innerHTML = `
 
-        <div class="PopUpContainer">
-        <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
+        <div id="popUpContainer" class="PopUpContainer">
+        <img onclick="slideOut()" class="xicon" src="assets/img/icon-x.svg" alt="">
 
         <div class="PopUpMM_Interior">
             <div class="PopUpModModus_Head">
