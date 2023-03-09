@@ -24,27 +24,7 @@
             <div class="contact-bar">
                 <div class="contact-bar-scroll">
                     <div class="contact-list" id="contact-list">
-                        <!-- <div class="contact-letter" id="contact-letter">A</div>
-                        <div class="contact-border" id="contact-border"></div>
-                        <div class="contact-list-order" id="contact-list-order">
-                            <div class="contact-list-content">
-                                <div class="contact-initials">AM
-                                </div>
-                                <div class="contact-name">
-                                    <span>Anton Mayer</span>
-                                    <a href="mailto: antom@gmail.com">antom@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-list-content">
-                                <div class="contact-initials" style="background: #9327FF;">AS
-                                </div>
-                                <div class="contact-name">
-                                    <span>Anja Schulz</span>
-                                    <a href="mailto: schulz@hotmail.com">schulz@hotmail.com</a>
-                                </div>
-                            </div>
-                        </div> -->
-                                  
+                        <!-- contact.js generate list with contacts -->     
                     </div>
                 </div>
             </div>
@@ -57,7 +37,7 @@
                 </div>
 
                 <div class="contact-selection" id="contact-selection">
-                    <span>holla</span>
+                    <!-- contact.js generate only one contact if press in list -->
                 </div>
             
                 <div class="newContact">
@@ -91,22 +71,22 @@
                 </div>
                 <form onsubmit="" class="popUpAddContact">
                     <div class="input">
-                        <input required type="text" placeholder="Name">
+                        <input  type="text" placeholder="Name" id="contact-popup-name">
                         <img src="assets/img/icon-user-grey.svg" alt="">
                     </div>
                     <div class="input">
-                        <input required type="email" placeholder="Email">
+                        <input  type="email" placeholder="Email" id="contact-popup-email">
                         <img src="assets/img/email_input.svg" alt="">
                     </div>
                     <div class="input">
-                        <input required type="number" placeholder="Phone">
+                        <input  type="number" placeholder="Phone" id="contact-popup-phone">
                         <img src="assets/img/icon-phone.svg" alt="">
                     </div>
                     <div class="popUpButton">
                         <button class="cancelBtn borderButton">Cancel
                             <img src="assets/img/icons-cancel.svg" alt="">
                         </button>
-                        <button class="createBtn ">Create Contact
+                        <button class="createBtn " onclick="addNewContact()">Create Contact
                             <img src="assets/img/icon-check-dark.svg" alt="">
                         </button>
                     </div>

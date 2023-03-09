@@ -68,6 +68,7 @@ let contacts = [
 
 let sortetcontactlist = [];
 let letters = [];
+// let newcontact = [];
 // funktionen aufruf 
 function contactinit(){
     generateLetters();
@@ -129,6 +130,7 @@ function renderContactlist(i, contact, firstletter){
 function openContact(i){
     let contact = contacts[i];
     console.log(contact);
+    console.log("laenge: ", contacts.length);
     let contactopen = document.getElementById('contact-selection');
     contactopen.innerHTML = "";
     contactopen.innerHTML = renderOpenContact(contact);
@@ -149,7 +151,7 @@ function renderOpenContact(contact){
                     </div>
                     <div class="contact-information-edit">
                         <span>Contact Information</span>
-                        <div class="contact-information-edit-button" id="contact-information-edit-button${contact["id"]}" onclick="contact-information-edit-button(${contact["id"]})">
+                        <div class="contact-information-edit-button" id="contact-information-edit-button" onclick="contact-information-edit-button(${contact["id"]})">
                             <img src="assets/img/pencil-no-bg.svg">
                             <span>Edit Contact</span>
                         </div>
@@ -162,4 +164,28 @@ function renderOpenContact(contact){
                     </div>   
     
     `;
+}
+
+// button new contact push in array contacts
+function addNewContact(){
+    let fullname = document.getElementById('contact-popup-name').value;
+    fullname = fullname.split(' ');
+    firstn = fullname[0];
+    lastn = fullname[1];
+    let contactmail = document.getElementById('contact-popup-email').value;
+    let contactphone = document.getElementById('contact-popup-phone').value;
+    // console.log("firstname: ", firstn);
+    
+    let newcontact = {
+        id: contacts.length,
+        "firstname": firstn,
+        "surname": lastn,
+        "email": contactmail,
+        "phone": contactphone,
+    }
+    
+    contacts.push(newcontact);
+    console.log(contacts);
+    // contactinit();
+    
 }
