@@ -18,6 +18,7 @@
     /* box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08); */
     margin-left: 232px;
 }
+
 .contact-content{
     /* position: relative; */
     width: 100%;
@@ -25,8 +26,8 @@
     max-height: 100%;
     background: #F6F7F8;
     overflow: hidden;
-    
 }
+
 .contact-header{
     display: flex;
     flex-direction: row;
