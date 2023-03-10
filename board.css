@@ -250,6 +250,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .postIt_Labels{
@@ -260,25 +261,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
 }
 
-.sales {
+.Sales {
     background-color: #fc71ff;
 }
 
-.backoffice {
+.Backoffice {
     background-color: #1fd7c1;
 }
 
-.design {
+.Design {
     background-color: #ff8a00;
 }
 
-.media {
+.Media {
     background-color: #ffc701;
 }
 
-.marketing {
+.Marketing {
     background-color: #0038ff;
 }
 
@@ -348,12 +356,39 @@ body {
     line-height: 120%;
 }
 
-.postIt_PriorityClass {
+/* .postIt_PriorityClass {
+    width: 30px;
+    height: 30px;
+} */
+
+.postIt_PriorityClass img {
     width: 30px;
     height: 30px;
 }
 
-.postIt_PriorityClass img {
+.Low {
+    background-image: url('assets/img/prio-low.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.Medium {
+    background-image: url('assets/img/prio-medium.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.Urgent {
+    background-image: url('assets/img/prio-urgent.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 30px;
     height: 30px;
 }
@@ -447,7 +482,7 @@ body {
     width: 142px;
     height: 40px;
 
-    background: #FC71FF;
+    /* background: #FC71FF; */
     border-radius: 8px;
 
     font-family: 'Inter';
@@ -511,7 +546,7 @@ body {
 .PopUp_Body_mid{
     display: flex;
     align-items: flex-start;
-    justify-content: center;    
+    justify-content: space-between;    
     margin-bottom: 20px;
 }
 
@@ -524,7 +559,7 @@ body {
     color: #000000;
 }
 
-.PopUp_Priority_Label{
+/* .PopUp_Priority_Label{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -539,15 +574,14 @@ body {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 
-    /* font-family: 'Inter';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
     line-height: 120%;
-    background: #FF3D00;
-    color: white; */
+    color: white;
 
-}
+} */
 
 .PopUp_Body_sub{
     display: flex;
@@ -650,6 +684,53 @@ body {
 .editbtn:active img {
     filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
 }
+
+.PopUp_Low {
+    background-image: url('assets/img/cardLow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    border: none;
+    width: 105px;
+    height: 33px;
+    margin-left: 25px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-color: #7ae229; */
+}
+
+.PopUp_Medium {
+    background-image: url('assets/img/cardMedium.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill !important;
+    border: none;
+    width: 143px;
+    height: 33px;
+    margin-left: 25px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-color: #ffa800; */
+}
+
+.PopUp_Urgent {
+    background-image: url('assets/img/cardUrgent.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    border: none;
+    width: 131px;
+    height: 33px;
+    margin-left: 25px;
+    /* gap: 10px;
+    width: 131px;
+    height: 33px; */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-color: #ff3d00; */
+}
+
+        /* SLIDE-in and SLIDE-out */
 
 .dnone {
     display:none !important;
