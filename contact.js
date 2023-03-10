@@ -48,42 +48,42 @@ function slideEditOut() {
 
 let contacts = [
     {
-        id: 0,
+        
         "firstname": "Anton",
         "surname": "Mayer",
         "email": "antom@gmail.com",
         "phone": "491111111111",
     },
     {
-        id: 1,
+        
         "firstname": "Anja",
         "surname": "Schulz",
         "email": "schulz@hotmail.com",
         "phone": "491111111112",
     },
     {
-        id: 2,
+        
         "firstname": "Benedikt",
         "surname": "Ziegler",
         "email": "benedikt@gmail.com",
         "phone": "491111111113",
     },
     {
-        id: 3,
+        
         "firstname": "David",
         "surname": "Eisenberg",
         "email": "davidberg@gmail.com",
         "phone": "491111111114",
     },
     {
-        id: 4,
+        
         "firstname": "Eva",
         "surname": "Fischer",
         "email": "eva@gmail.com",
         "phone": "491111111115",
     },
     {
-        id: 5,
+        
         "firstname": "Emmanuel",
         "surname": "Mauer",
         "email": "emmanuelMa@gmail.com",
@@ -104,10 +104,11 @@ function contactinit(){
 function generateLetters(){
     for (let i = 0; i < contacts.length; i++) {
         let firstletter = contacts[i]["firstname"].charAt(0);
-        // console.log(firstletter);
+        
         // wenn letters ein A ist und es nicht ein A beinhaltet 
         if (!letters.includes(firstletter)) {  
             letters.push(firstletter);
+            console.log(firstletter);
             letters.sort(); 
         }     
     }
@@ -158,15 +159,15 @@ function openContact(i){
     // console.log("laenge: ", contacts.length);
     let contactopen = document.getElementById('contact-selection');
     contactopen.innerHTML = "";
-    contactopen.innerHTML = renderOpenContact(contact);
+    contactopen.innerHTML = renderOpenContact(contact, i);
 
 }
 
 
-function renderOpenContact(contact){
+function renderOpenContact(contact, i){
     return`    
                     <div class="contact-sel-content">
-                        <div class="contact-selection-initials farbe${contact["id"]}" >${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
+                        <div class="contact-selection-initials farbe${i}" >${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
                         </div>
                         <div class="contact-selecetion-header">
                             <span>${contact["firstname"]} ${contact["surname"]}</span>
@@ -178,7 +179,7 @@ function renderOpenContact(contact){
                     </div>
                     <div class="contact-information-edit">
                         <span>Contact Information</span>
-                        <div class="contact-information-edit-button" id="contact-information-edit-button" onclick="contactInformationEditButton(${contact["id"]}), slideEditIn()">
+                        <div class="contact-information-edit-button" id="contact-information-edit-button" onclick="contactInformationEditButton(${i}), slideEditIn()">
                             <img src="assets/img/pencil-no-bg.svg">
                             <span>Edit Contact</span>
                         </div>
@@ -206,7 +207,7 @@ function addNewContact(){
     // console.log("firstname: ", firstn);
     
     let newcontact = {
-        id: contacts.length,
+        
         "firstname": firstn2,
         "surname": lastn2,
         "email": contactmail,
@@ -252,7 +253,7 @@ function renderPopupEditContact(i){
                     
                 </div>                    
             </div>
-            <form onsubmit="saveEditContact(${i}); return false" class="popUpAddContactE">
+            <form onsubmit="return false" class="popUpAddContactE">
                 <div class="inputE">
                     <input required type="text" placeholder="Name" id="editName${i}">
                     <img src="assets/img/icon-user-grey.svg" alt="">
@@ -290,7 +291,7 @@ function saveEditContact(i){
     let firstn2 = firstn.charAt(0).toUpperCase() + firstn.slice(1);
     let lastn2 = lastn.charAt(0).toUpperCase() + lastn.slice(1);
     let newcontact = {
-        id: i,
+        
         "firstname": firstn2,
         "surname": lastn2,
         "email": email,
@@ -304,6 +305,6 @@ function saveEditContact(i){
 // deleteContact
 function deleteEditContact(i){
     contacts.splice(i, 1);
-    contactinit();
-    openContact(i);
+    console.log(i); 
+    contactinit();   
 }
