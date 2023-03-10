@@ -1,5 +1,8 @@
 setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
 
+let username = [];
+let checkbox = [];
+
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
@@ -34,15 +37,21 @@ function shakeElement() {
 // let msgBox = document.getElementById('msgBox');
 // setTimeout(function(){msgBox.classList.add('dnone')}, 2000);
 
-const rmCheck = document.getElementById("rememberMe"),
-    emailInput = document.getElementById("email");
+
+function remember(){
+const rmCheck = document.getElementById("rememberMe");
+const emailInput = document.getElementById("email");
+
+// rmCheck.setAttribute("checked", "checked")
+
 
 if (localStorage.checkbox && localStorage.checkbox !== "") {
-  rmCheck.setAttribute("checked", "checked");
-  emailInput.value = localStorage.username;
+    rmCheck.setAttribute("checked", "checked");
+    emailInput.value = localStorage.username;
 } else {
-  rmCheck.removeAttribute("checked");
-  emailInput.value = "";
+    rmCheck.removeAttribute("checked");
+    emailInput.value = "";
+}
 }
 
 function lsRememberMe() {
