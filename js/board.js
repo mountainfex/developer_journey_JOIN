@@ -1,39 +1,104 @@
-// function renderPostit() {
-//     Postit = document.getElementById('dragNdrop_1_toDo');
-//     Postit.innerHTML = '';
 
-//     for (let i = 0; i < tasks.length; i++) {
-//         let task = tasks[i];
-//         Postit.innerHTML += templatePostit(task, i);
-//     }  
-// }
+let tasks = [
+    {
+    "titles": "Neue Webseite - online Termin",
+    "descriptions": "Neue JavaScript Funktionen und Spezial-Effekte müssen noch eingebaut werden",
+    "labels": "Design",
+    "Personell": "Front-End Developer",
+    "Dates": "2023-06-01",
+    "Priorities": "urgent",
+    // "Subtasks": subtask,
+    },
+    {
+    "titles": "Präsentation",
+    "descriptions": "Produktpräsentation unseres neuen Produkts 'Pokemon-Sammelalbum' ",
+    "labels": "Marketing",
+    "Personell": "Satoshi Nakamoto",
+    "Dates": "2023-05-01",
+    "Priorities": "middle",
+    // "Subtasks": subtask,
+    },  
+    {
+    "titles": "Druckerpapier bestellen",
+    "descriptions": "20 Pakete mit 80g-Papier(recyclet)",
+    "labels": "Backoffice",
+    "Personell": "Sebastian Grundig",
+    "Dates": "2023-04-21",
+    "Priorities": "low",
+    // "Subtasks": subtask,
+    }
+];
+
+let prioIMGArray = ["assets/img/prio-low.svg", "assets/img/prio-medium.svg", "assets/img/prio-urgent.svg"];
+
+function prioIMGs(prioAsString) {
+    let prioIMG = document.getElementById('postIt_PriorityClass');
+
+    for (let index = 0; index < prioIMGArray.length; index++) {
+        let correctPrioIMG = prioIMGArray[index];
+        // let prioString = 
+        
+        if (prioAsString == low ) {
+            prioIMG.innerHTML = '';
+            prioIMG.innerHTML = `<img src="assets/img/prio-low.svg">`;
+            // prioIMG = correctPrioIMG
+        }
+
+        if (prioAsString == middle ) {
+            prioIMG.innerHTML = '';
+            prioIMG.innerHTML = `<img src="assets/img/prio-medium.svg">`;
+            // prioIMG = correctPrioIMG
+        }
+
+        if (prioAsString == urgent ) {
+            prioIMG.innerHTML = '';
+            prioIMG.innerHTML = `<img src="assets/img/prio-urgent.svg">`;
+            // prioIMG = correctPrioIMG
+        }
+    }
+    
+    // prioIMG.innerHTML = '';
+    // prioIMG.innerHTML = `${prioIMG}`;
+}
+
+function renderPostit() {
+    Postit = document.getElementById('TASKS');
+    Postit.innerHTML = '';
+
+    for (let i = 0; i < tasks.length; i++) {
+        let task = tasks[i];
+        Postit.innerHTML += templatePostit(task, i);
+        prioIMGs (task['Priorities']);
+    }
+    
+}
 /* wie können wir für die function renderPostit() von dieser js-Datei aus auf ein array in der Datei add_tasks.js zugreifen*/
 
-// function templatePostit (task, i) {
-//     return `
-//         <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
-//             <div class="postItInterior">
-//                 <div class="postIt_Head">
-//                     <div class="postIt_Labels">Design</div>
-//                     <div class="postIT_Headline">Webdesign redesign</div>
-//                     <div class="postIt_Task">Modify the contents of the main website...</div>
-//                 </div>
-//                 <div class="postIt_Body">
-//                     <div class="postIt_ProgressBar"><img src="assets/img/Frame 141.png"></div>
-//                     <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
-//                 </div>
-//                 <div class="postIt_Bottom">
-//                     <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
-//                     <div class="postIt_PriorityClass"><img src="assets/img/Frame 111.png"></div>
-//                 </div>
-//             </div>
-//         </div>
-//     `;
-// }
+function templatePostit (task, i) {
+    return `
+        <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
+        <div class="postItInterior">
+            <div class="postIt_Head">
+                <div class="postIt_Labels ${task['labels']}">${task['labels']}</div>
+                <div class="postIT_Headline">${task['titles']}</div>
+                <div class="postIt_TaskDescriptions">${task['descriptions']}</div>
+            </div>
+            <div class="postIt_Body">
+                <div class="postIt_ProgressBar"><i src="assets/img/Frame 141.png"></div>
+                <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
+            </div>
+            <div class="postIt_Bottom">
+                <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
+                <div id= "postIt_PriorityClass" class="postIt_PriorityClass"></div>
+            </div>
+        </div>
+    </div>
+    `;
+}
 
-// function renderPopUpTask () {
+function renderPopUpTask () {
 
-// }
+}
 
 
 function slideIn(){

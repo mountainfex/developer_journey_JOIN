@@ -9,12 +9,10 @@
     <script src="js/board.js"></script>
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="board.css">
-    <link rel="stylesheet" type="text/css" href="add_task.js">
-    <link rel="stylesheet" type="text/css" href="contact.js">
     <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
     
 </head>
-<body onload="includeHTML()">
+<body onload="includeHTML(), renderPostit()">
     <div w3-include-html="assets/templates/Navbar.html"></div>
    
     <div class="boxMajor">
@@ -43,20 +41,22 @@
                         <p>To do</p>
                         <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
                     </div>
-                    <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
-                        <div class="postItInterior">
-                            <div class="postIt_Head">
-                                <div class="postIt_Labels">Design</div>
-                                <div class="postIT_Headline">Webdesign redesign</div>
-                                <div class="postIt_Task">Modify the contents of the main website...</div>
-                            </div>
-                            <div class="postIt_Body">
-                                <div class="postIt_ProgressBar"><img src="assets/img/Frame 141.png"></div>
-                                <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
-                            </div>
-                            <div class="postIt_Bottom">
-                                <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
-                                <div class="postIt_PriorityClass"><img src="assets/img/Frame 111.png"></div>
+                    <div id="TASKS">
+                        <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
+                            <div class="postItInterior">
+                                <div class="postIt_Head">
+                                    <div class="postIt_Labels">Design</div>
+                                    <div class="postIT_Headline">Webdesign redesign</div>
+                                    <div class="postIt_Task">Modify the contents of the main website...</div>
+                                </div>
+                                <div class="postIt_Body">
+                                    <div class="postIt_ProgressBar"><img src="assets/img/Frame 141.png"></div>
+                                    <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
+                                </div>
+                                <div class="postIt_Bottom">
+                                    <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
+                                    <div class="postIt_PriorityClass"><img src="assets/img/Frame 111.png"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

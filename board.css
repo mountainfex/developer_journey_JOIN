@@ -256,12 +256,32 @@ body {
     /* padding: 4px 25px; */
     width: 103px;
     height: 27px;
-    background-color: #FF7A00;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.sales {
+    background-color: #fc71ff;
+}
+
+.backoffice {
+    background-color: #1fd7c1;
+}
+
+.design {
+    background-color: #ff8a00;
+}
+
+.media {
+    background-color: #ffc701;
+}
+
+.marketing {
+    background-color: #0038ff;
+}
+
 
 .postIT_Headline{
     font-family: 'Inter';
@@ -272,7 +292,7 @@ body {
     padding-top: 10px;
 }
 
-.postIt_Task{
+.postIt_TaskDescriptions{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -328,6 +348,15 @@ body {
     line-height: 120%;
 }
 
+.postIt_PriorityClass {
+    width: 30px;
+    height: 30px;
+}
+
+.postIt_PriorityClass img {
+    width: 30px;
+    height: 30px;
+}
 
 
 
