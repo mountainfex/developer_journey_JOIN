@@ -199,14 +199,16 @@ function addNewContact(){
     fullname = fullname.split(' ');
     firstn = fullname[0];
     lastn = fullname[1];
+    let firstn2 = firstn.charAt(0).toUpperCase() + firstn.slice(1);
+    let lastn2 = lastn.charAt(0).toUpperCase() + lastn.slice(1);
     let contactmail = document.getElementById('contact-popup-email').value;
     let contactphone = document.getElementById('contact-popup-phone').value;
     // console.log("firstname: ", firstn);
     
     let newcontact = {
         id: contacts.length,
-        "firstname": firstn,
-        "surname": lastn,
+        "firstname": firstn2,
+        "surname": lastn2,
         "email": contactmail,
         "phone": contactphone,
     }
@@ -286,8 +288,6 @@ function saveEditContact(i){
     lastn = fullname[1];
     let firstn2 = firstn.charAt(0).toUpperCase() + firstn.slice(1);
     let lastn2 = lastn.charAt(0).toUpperCase() + lastn.slice(1);
-
-    
     let newcontact = {
         id: i,
         "firstname": firstn2,
@@ -296,6 +296,7 @@ function saveEditContact(i){
         "phone": phone,
     }
     contacts.splice(i, 1, newcontact);
-    console.log(contacts);
+    // console.log(contacts);
     contactinit();
+    openContact(i);
 }
