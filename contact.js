@@ -143,7 +143,7 @@ function renderContactlist(i, contact, firstletter){
     let contactlist = document.getElementById(`contact-list-order${firstletter}`);
     contactlist.innerHTML += `
     <div class="contact-list-content" id="contact-list-content${i}" onclick="openContact(${i}); slideInContact()">
-        <div class="contact-initials" id="contact-initials">${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
+        <div class="contact-initials farbe${i}" id="contact-initials">${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
         </div>
         <div class="contact-name" id="contact-name">
             <span>${contact["firstname"]} ${contact["surname"]}</span>
@@ -166,7 +166,7 @@ function openContact(i){
 function renderOpenContact(contact){
     return`    
                     <div class="contact-sel-content">
-                        <div class="contact-selection-initials" style="background: #FF7A00;">${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
+                        <div class="contact-selection-initials farbe${contact["id"]}" >${contact["firstname"].charAt(0)}${contact["surname"].charAt(0)}
                         </div>
                         <div class="contact-selecetion-header">
                             <span>${contact["firstname"]} ${contact["surname"]}</span>
