@@ -20,10 +20,7 @@ function resetPassword(){
     let users = JSON.parse(backend.getItem('users')) || [];
     let confirmedPassword = document.getElementById("confirmPassword").value;
 
-    let newPassword =  {
-        password: confirmedPassword
-    }
+    let newPassword =  {password: confirmedPassword}
 
-    users.splice( 1, newPassword);
-
+    users.splice(1, newPassword);
 }
