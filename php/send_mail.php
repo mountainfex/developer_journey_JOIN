@@ -1,11 +1,7 @@
-<script src=""></script>
-
 <?php
 
 ########### CONFIG ###############
 
-$recipient = 'your@mail.de';
-// $redirect = '../templates/success.html';
 
 ########### CONFIG END ###########
 
@@ -51,17 +47,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
         \nYour JOIN-Team\n";
         
         $recipient = $email;
-        $subject = "Reset your password for JOIN App;
-        $headers = "From:  noreply@developerakademie.com";
+        $subject = "Reset your password for JOIN App";
+        $headers = "From:  noreply@https://gruppe-08i.developerakademie.net";
 
         $result = mail($recipient, $subject, $message, $headers);
         print($result);
 
-        mail($recipient, $subject, $_POST['message'], $headers);
-        header("Location: " . $redirect); 
-
         break;
-    default: //Reject any non POST or OPTIONS requests.
+        default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }

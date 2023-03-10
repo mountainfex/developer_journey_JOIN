@@ -1,8 +1,7 @@
-async function submit(event){
+async function onSubmit(event){
     event.preventDefault();
     let formData = new FormData (event.target);
     let response = await action(formData);
-
     if(response.ok){
         alert("E-Mail has been send!");
     } else {

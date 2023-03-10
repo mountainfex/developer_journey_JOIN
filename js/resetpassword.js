@@ -3,7 +3,6 @@ let users;
 
 function onPageLoad(){
     email = getEmailURLParameter();
-    users = getUsers();
 }
 
 function getEmailURLParameter(){
@@ -13,10 +12,18 @@ function getEmailURLParameter(){
     return email;
 }
 
-function getUsers(){
-    return JSON.parse(backend.getItem('users')) || [];
-}
-
 function onSubmit(event){
     event.preventDefault();
+}
+
+function resetPassword(){
+    let users = JSON.parse(backend.getItem('users')) || [];
+    let confirmedPassword = document.getElementById("confirmPassword").value;
+
+    let newPassword =  {
+        password: confirmedPassword
+    }
+
+    users.splice( 1, newPassword);
+
 }
