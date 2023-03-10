@@ -266,7 +266,7 @@ function renderPopupEditContact(i){
                     <img src="assets/img/icon-phone.svg" alt="">
                 </div>
                 <div class="popUpButtonE">
-                    <button class="saveBtnE buttonE" onclick="saveEditContact(${i})">Save</button>
+                    <button class="saveBtnE buttonE" onclick="saveEditContact(${i}), slideEditOut()">Save</button>
                 </div>
             </form>
         </div>
