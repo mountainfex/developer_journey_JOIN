@@ -9,6 +9,8 @@
     <script src="js/board.js"></script>
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="board.css">
+    <link rel="stylesheet" type="text/css" href="add_task.js">
+    <link rel="stylesheet" type="text/css" href="contact.js">
     <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
     
 </head>
@@ -36,7 +38,7 @@
             </div>
 
             <div class="boardBottom_dragNdropArea">
-                <div  class="dragNdrop_1_toDo">
+                <div id="dragNdrop_1_toDo" class="dragNdrop_1_toDo">
                     <div class="toolsBottom">
                         <p>To do</p>
                         <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
@@ -166,12 +168,13 @@
                         <div class="PopUp_Assign_people_names">David Eisenberg</div>
                     </div>
                 </div>
-
+    
                 <div>
-                    <button onclick="PopUpContainer_modModus ()" class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
+                    <button onclick="renderPopUpContainer_modModus ()" class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
                 </div>
             </div>
         </div>
+        
     </div>
 
 
