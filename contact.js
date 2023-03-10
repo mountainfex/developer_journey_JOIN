@@ -102,6 +102,7 @@ function contactinit(){
 }
 // firstletter sort and generate
 function generateLetters(){
+    letters = [];
     for (let i = 0; i < contacts.length; i++) {
         let firstletter = contacts[i]["firstname"].charAt(0);
         
@@ -116,7 +117,7 @@ function generateLetters(){
 
 function renderLetters() {
     let contact = document.getElementById('contact-list');
-    contact.innerHTML = '';
+    contact.innerHTML = `` ;
     for (let i = 0; i < letters.length; i++) {
         let firstLetter = letters[i];
         contact.innerHTML += renderContacts(firstLetter, i);
@@ -304,7 +305,13 @@ function saveEditContact(i){
 }
 // deleteContact
 function deleteEditContact(i){
+    document.getElementById('contact-selection').innerHTML = "";
+    let firstletter = contacts[i]['firstname'].charAt(0);
+    
+    console.log(firstletter);
     contacts.splice(i, 1);
-    console.log(i); 
-    contactinit();   
+    
+    // console.log(letters); 
+   contactinit();
+    
 }
