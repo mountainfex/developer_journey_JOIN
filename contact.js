@@ -247,7 +247,7 @@ function renderPopupEditContact(i){
         <div class="popUpRightE">
             <img class="xiconE" id="closeBtnE" onclick="slideEditOut()" src="assets/img/icon-x.svg" alt="">
             <div class="popUpRightImgE" id="popupEditInitials">
-                <div class="popUpRightImgBGE">${contacts[i]["firstname"].charAt(0)}${contacts[i]["surname"].charAt(0)}
+                <div class="popUpRightImgBGE farbe${i}">${contacts[i]["firstname"].charAt(0)}${contacts[i]["surname"].charAt(0)}
                     
                     
                 </div>                    
