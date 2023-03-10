@@ -266,6 +266,7 @@ function renderPopupEditContact(i){
                     <img src="assets/img/icon-phone.svg" alt="">
                 </div>
                 <div class="popUpButtonE">
+                    <button class="deleteBtnE buttonE" onclick="deleteEditContact(${i}), slideEditOut()">Delete</button>
                     <button class="saveBtnE buttonE" onclick="saveEditContact(${i}), slideEditOut()">Save</button>
                 </div>
             </form>
@@ -297,6 +298,12 @@ function saveEditContact(i){
     }
     contacts.splice(i, 1, newcontact);
     // console.log(contacts);
+    contactinit();
+    openContact(i);
+}
+// deleteContact
+function deleteEditContact(i){
+    contacts.splice(i, 1);
     contactinit();
     openContact(i);
 }
