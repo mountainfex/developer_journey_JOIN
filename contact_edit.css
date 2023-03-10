@@ -5,19 +5,19 @@
 
 }
 
-.popUpBackground {
+.popUpBackgroundE {
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
-.popUpContact {
+.popUpContactE {
     width: 1212px;
     height: 594px;
 
@@ -25,7 +25,7 @@
     position: relative;
 }
 
-.popUpLeft {
+.popUpLeftE {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@
     background: #2A3647;
 }
 
-.logoimg {
+.logoimgE {
     width: 55px;
     height: 66px;
     position: absolute;
@@ -55,7 +55,7 @@
     z-index: 3;
 
 }
-.popUpLeftHeader {
+.popUpLeftHeaderE {
     /* Version 2/t1 */
     font-weight: 700;
     font-size: 61px;
@@ -69,7 +69,7 @@
     z-index: 0;
 }
 
-.popUpLeftSubline {
+.popUpLeftSublineE {
     /* Version 2/t5 */
     font-family: 'Inter';
     font-style: normal;
@@ -85,7 +85,7 @@
     z-index: 1;
 }
 
-.popUpRight {
+.popUpRightE {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,7 @@
     background: #FFFFFF;
 }
 
-.xicon {
+.xiconE {
     position: absolute;
     width: 21px;
     height: 21px;
@@ -112,12 +112,12 @@
     transition: 200ms;
 }
 
-.xicon:hover {
+.xiconE:hover {
     cursor: pointer;
     transform: rotate(135deg);
 }
 
-.popUpRightImg {
+.popUpRightImgE {
     position: absolute;
     width: 120px;
     height: 120px;
@@ -125,35 +125,31 @@
     top: 37%;
 }
 
-.popUpRightImgBG {
+.popUpRightImgBGE {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
     gap: 10px;
-    isolation: isolate;
-
-    position: absolute;
     width: 120px;
     height: 120px;
-
-    background: #D1D1D1;
-    /* white */
-
+    background: #FFFFFF;
     border: 3px solid #FFFFFF;
-    /* nuevo */
-
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+    border-radius: 70px;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+    color: #FFFFFF;
+    background-color: #FF7A00;
 }
 
-.popUpRightImgBG img {
+.popUpRightImgBGE img {
     width: 41px;
     height: 54px;
 }
 
-.popUpAddContact {
+.popUpAddContactE {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -167,7 +163,7 @@
 
 }
 
-.input {
+.inputE {
     box-sizing: border-box;
     /* Auto layout */
     display: flex;
@@ -183,7 +179,7 @@
    /* or 25px */    
 }
 
-.input input {
+.inputE input {
     border: none;
     outline: none;
     width: 100%;
@@ -193,22 +189,22 @@
     color: #171717;
 }
 
-input::placeholder{
+inputE::placeholder{
     color: #D1D1D1;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+inputE::-webkit-outer-spin-button,
+inputE::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
+inputE[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
-.popUpButton {
+.popUpButtonE {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -227,7 +223,7 @@ input[type=number] {
     flex-grow: 0;
 }
 
-.saveBtn {
+.saveBtnE {
     /* Auto layout */
 
     display: flex;
@@ -256,17 +252,78 @@ input[type=number] {
     transition: 200ms;
 }
 
-.button:hover {
+.buttonE:hover {
     cursor: pointer;
     background-color: #29ABE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.button:active{
+.buttonE:active{
     background: #FFFFFF;
     /* stronger */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: black;
 }
+
+.dnoneE {
+    display: none !important;
+}
+
+.slideinE{
+    display: flex ;
+    animation: slide-inE 600ms ease-in-out;
+}
+
+.slideoutE {
+    animation: slide-outE 600ms ease-in-out;
+}
+
+.fadeinE{
+    display: flex ;
+    animation: fade-inE 600ms ease-in-out;
+}
+.fadeoutE{
+    animation: fade-outE 600ms ease-in-out;
+}
+
+
+@keyframes slide-inE {
+	0% {
+		transform: translateX(250%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-outE {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(250%);
+	}
+}
+
+@keyframes fade-inE {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-outE {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
 
 

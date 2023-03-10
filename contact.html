@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="contact_popup.css">
+    <link rel="stylesheet" href="contact_edit.css">
 
     <script src="script.js"></script>
     <script src="contact.js"></script>
@@ -51,7 +52,13 @@
 
         </div>
     </div>
+    <!-- popupedit -->
 
+    <div class="popUpBackgroundE" id="popupedit">
+
+    </div>
+
+    <!-- popup save -->
     <div class="popUpBackground" id="popup">
         <div class="popUpContact" id="mainPopUp">
             <div class="popUpLeft">
@@ -86,7 +93,7 @@
                         <button class="cancelBtn borderButton">Cancel
                             <img src="assets/img/icons-cancel.svg" alt="">
                         </button>
-                        <button class="createBtn ">Create Contact
+                        <button class="createBtn" onclick="addNewContact()">Create Contact
                             <img src="assets/img/icon-check-dark.svg" alt="">
                         </button>
                     </div>

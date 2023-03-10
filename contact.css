@@ -350,7 +350,7 @@
     gap: 50px;
 }
 .contact-sel-content span{
-    width: 287px;
+    width: 400px;
     height: 56px;
     /* Version 2/t2 */
     font-family: 'Inter';
@@ -428,7 +428,7 @@
     gap: 6px;
     width: 126.85px;
     height: 29.34px;
-    
+    cursor: pointer;
 }
 .contact-information-edit-button span{
     font-family: 'Inter';
