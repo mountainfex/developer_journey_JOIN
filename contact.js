@@ -214,7 +214,7 @@ function addNewContact(){
     }
     
     contacts.push(newcontact);
-    console.log(contacts);
+    // console.log(contacts);
     contactinit();
     
 }
@@ -223,7 +223,7 @@ function contactInformationEditButton(i){
     let popupedit = document.getElementById('popupedit');
     popupedit.innerHTML = "";
     popupedit.innerHTML = renderPopupEditContact(i);
-    console.log(i);
+    // console.log(i);
 
     let firstname = contacts[i]["firstname"];
     let surname = contacts[i]["surname"];
@@ -278,9 +278,9 @@ function saveEditContact(i){
     let name = document.getElementById(`editName${i}`).value;
     let email = document.getElementById(`editEmail${i}`).value;
     let phone = document.getElementById(`editPhone${i}`).value;
-    console.log("name: ",name);
-    console.log("email: ",email);
-    console.log("phone: ",phone);
+    // console.log("name: ",name);
+    // console.log("email: ",email);
+    // console.log("phone: ",phone);
 
 
     fullname = name.split(' ');
