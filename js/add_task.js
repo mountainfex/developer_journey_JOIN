@@ -1,5 +1,6 @@
 let tasks = [];
 let priority = [];
+let subTasks = [];
 
 function pushTask () {
         let title = document.getElementById('input_Title').value;
@@ -98,3 +99,61 @@ function priorityGreen() {
         yellow.classList.add('PopUpMM_Priority_Labels_white');
 
 }
+
+
+
+
+function renderSubTask() {
+        document.getElementById("subtasksCheckbox").innerHTML = ``;
+        for (let subTaskIndex = 0; subTaskIndex < subTasks.length; subTaskIndex++) {
+               let  subTask = subTasks[subTaskIndex];
+                document.getElementById("subtasksCheckbox").innerHTML += showSubtaskCheckbox(subTask, subTaskIndex);
+        }
+}
+
+
+function showSubtaskCheckbox(subTask, subTaskIndex) {
+        return /*html*/ `
+        <div id="subTask_${subTaskIndex}" class="subtasks">
+          <span>${subTask.title}</span> 
+          <img src="assets/img/icons-cancel.svg" onclick="deleteSubTaskAdd(${subTaskIndex})" class="subtasks-trash" alt="cancel"> 
+        </div>
+      `;
+      }
+
+function deleteSubTaskAdd(subTaskIndex) {
+        document.getElementById(`subTask_${subTaskIndex}`).innerHTML = ``;
+        subTasks.splice(subTaskIndex, 1);
+      }
+
+      function pushSubtasks() {
+        let newSubTaskText = document.getElementById('subtask_input').value;
+        let emptySubTaskText = document.getElementById('empty_subtask_text');
+        emptySubTaskText.innerHTML = '';
+        isNewSubTask(newSubTaskText, emptySubTaskText);
+      }
+
+      function isNewSubTask(newSubTaskText, emptySubTaskText) {
+        let subTaskInput = document.getElementById("subtask_input")
+        if (newSubTaskText.length > 0) {
+         let newSubTask = {
+            'title': newSubTaskText,
+            
+          }
+          subTasks.push(newSubTask)
+          renderSubTask(newSubTask);
+          document.getElementById('subtask_input').value = ``
+        } else if (newSubTaskText.length == 0) {
+          subTaskInput.placeholder = 'Please enter a subtask!';
+          setTimeout(() => {
+            subTaskInput.placeholder = 'Add a new subtask!';
+          }, 2000);
+        }
+      }
+
+      function clearSubTasks() {
+        if (document.getElementById('subtask_input').value != null) {
+          document.getElementById("subtask_input").value = '';
+        }
+      }
+      

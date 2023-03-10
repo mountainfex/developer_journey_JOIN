@@ -93,13 +93,15 @@
                             <p>Substasks</p>
                         </div>
                             <input id="subtask_input" class="add-new-subtask-field" type="text" placeholder="Add new subtask">
-                            <!-- <div class="frame-36">
-                                <img src="assets/img/icon-add-plus-dark.svg" alt="">
-                            </div> -->
+                            <div class="frame-36">
+                                <img onclick="pushSubtasks()" src="assets/img/icon-add-plus-dark.svg" alt="">
+                            </div>
 
-                            <div class="subtasksCheckbox">
+                            <div class="subtasksCheckbox" id="subtasksCheckbox">
                                 <img src="assets/img/icon-check-empty.svg" alt="">
                                 <p class="check-subtask-title">Subtask 1</p>
+                            </div>
+                            <div id="empty_subtask_text">
                             </div>
                         </div>
                     </div>
