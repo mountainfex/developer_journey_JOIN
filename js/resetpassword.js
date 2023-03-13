@@ -1,15 +1,31 @@
-let email = "";
-let users;
+setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
 
-// async function init() {
-//     setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
-//     await downloadFromServer();
-//     users = JSON.parse(backend.getItem('users')) || [];
-// }
+async function init(){
+    await downloadFromServer();
+    users = JSON.parse(backend.getItem('users')) || [];
+}
 
+async function resetPassword() {
+    let newPassword = document.getElementById('newPassword');
+    let confirmPassword = document.getElementById('confirmPassword');
+    let email = getEmailURLParameter();
 
-function onPageLoad(){
-    email = getEmailURLParameter();
+    let user = users.find(u => u.email === email);
+    if (user.email === email) {
+        if (newPassword.value === confirmPassword.value) {
+            user.password = newPassword.value;
+            await backend.setItem('users', JSON.stringify(users));
+            console.log('Password reset successful!');
+        //     document.getElementById('successful-reset').innerHTML += /*html*/`<div class="send-mail">
+        //         <img src="../src/img/resetPassword.svg">
+        // </div>`
+            setTimeout(function(){window.location.href = '/01Join/index.html'} , 3000);
+        } else {
+            console.log('Passwords do not match');
+            newPassword.value = '';
+            confirmPassword.value = '';
+        }
+    }
 }
 
 function getEmailURLParameter(){
@@ -17,16 +33,4 @@ function getEmailURLParameter(){
     const urlParams = new URLSearchParams(queryString);
     const email = urlParams.get('email');
     return email;
-}
-
-function onSubmit(event){
-    event.preventDefault();
-}
-
-function resetPassword(){
-    let confirmedPassword = document.getElementById("confirmPassword").value;
-
-    let newPassword =  {password: confirmedPassword}
-
-    users.splice(1, newPassword);
 }

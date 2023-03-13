@@ -6,6 +6,13 @@ let checkbox = [];
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
+    messageBox();
+}
+
+function messageBox(){
+    let message = document.getElementById('msgBox');
+    setInterval(function(){message.classList.add('fadeout')}, 2750);
+    setTimeout(function(){message.classList.add('dnone')}, 3000);
 }
 
 function login (){
@@ -34,32 +41,8 @@ function shakeElement() {
     }, 1000);
 }
 
-// let msgBox = document.getElementById('msgBox');
-// setTimeout(function(){msgBox.classList.add('dnone')}, 2000);
 
 
-function remember(){
-const rmCheck = document.getElementById("rememberMe");
-const emailInput = document.getElementById("email");
-
-// rmCheck.setAttribute("checked", "checked")
 
 
-if (localStorage.checkbox && localStorage.checkbox !== "") {
-    rmCheck.setAttribute("checked", "checked");
-    emailInput.value = localStorage.username;
-} else {
-    rmCheck.removeAttribute("checked");
-    emailInput.value = "";
-}
-}
 
-function lsRememberMe() {
-  if (rmCheck.checked && emailInput.value !== "") {
-    localStorage.username = emailInput.value;
-    localStorage.checkbox = rmCheck.value;
-  } else {
-    localStorage.username = "";
-    localStorage.checkbox = "";
-  }
-}
