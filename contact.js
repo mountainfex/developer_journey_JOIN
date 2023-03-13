@@ -17,6 +17,9 @@ function slideIn(){
     popup.classList.remove('fadeout');
     popup.classList.add('fadein');
     popup.classList.remove('dnone');
+    document.getElementById('contact-popup-name').value = '';
+    document.getElementById('contact-popup-email').value = '';
+    document.getElementById('contact-popup-phone').value = '';
 } 
 
 function slideOut() {
@@ -232,6 +235,12 @@ function addNewContact(){
     // console.log(contacts);
     contactinit();
     
+    
+    document.getElementById('succesfulC').classList.remove("dnone");
+    setTimeout(function(){document.getElementById('succesfulC').classList.add('dnone')}, 2000);
+    const box = document.getElementById('succesfulC');
+    box.style.animationName = 'fadepopup';
+    setTimeout(() => {box.style.display = 'none'}, 2000);
 }
 
 async function pushContactBackend(){
