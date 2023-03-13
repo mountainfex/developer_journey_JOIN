@@ -395,6 +395,40 @@ body {
 
 
 
+
+
+/* <-- Drag'N Drop Area --> */
+
+.TASKS_todo {
+    border-style: dotted;
+    background-color: darkgray;
+    min-height: 500px;
+    min-width: 255px;
+}
+
+.TASKS_inProgress {
+    border-style: dotted;
+    background-color: darkgray;
+    min-height: 500px;
+    min-width: 255px;
+}
+
+.TASKS_awaitingFeedback {
+    border-style: dotted;
+    background-color: darkgray;
+    min-height: 500px;
+    min-width: 255px;
+}
+
+.TASKS_done {
+    border-style: dotted;
+    background-color: darkgray;
+    min-height: 500px;
+    min-width: 255px;
+}
+
+
+
 /* <-- PopUpContainer --> */
 
 

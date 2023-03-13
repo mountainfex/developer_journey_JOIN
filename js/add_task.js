@@ -1,6 +1,6 @@
 let tasks = [
   {
-  "ID": 1,
+  "ID": 0,
   "titles": "Neue Webseite - online Termin",
   "descriptions": "Neue JavaScript Funktionen und Spezial-Effekte müssen noch eingebaut werden",
   "labels": "Design",
@@ -8,10 +8,10 @@ let tasks = [
   "Dates": "2023-06-01",
   "Priorities": "Urgent",
   // "Subtasks": subtask,
-  "Category": "open",
+  "category": "TASKS_todo",
   },
   {
-  "ID": 2,
+  "ID": 1,
   "titles": "Präsentation",
   "descriptions": "Produktpräsentation unseres neuen Produkts 'Pokemon-Sammelalbum' ",
   "labels": "Marketing",
@@ -19,10 +19,10 @@ let tasks = [
   "Dates": "2023-05-01",
   "Priorities": "Medium",
   // "Subtasks": subtask,
-  "Category": "open",
+  "category": "TASKS_todo",
   },  
   {
-  "ID": 3,
+  "ID": 2,
   "titles": "Druckerpapier bestellen",
   "descriptions": "20 Pakete mit 80g-Papier(recyclet)",
   "labels": "Backoffice",
@@ -30,10 +30,10 @@ let tasks = [
   "Dates": "2023-04-21",
   "Priorities": "Low",
   // "Subtasks": subtask,
-  "Category": "open",
+  "category": "TASKS_todo",
   },
   {
-  "ID": 4,
+  "ID": 3,
   "titles": "Kaffee Einkaufen",
   "descriptions": "100 Pack Kaffee (aromatisch)",
   "labels": "Backoffice",
@@ -41,7 +41,7 @@ let tasks = [
   "Dates": "2023-07-21",
   "Priorities": "Low",
   // "Subtasks": subtask,
-  "Category": "closed",
+  "category": "TASKS_inProgress",
   }
 ];
 

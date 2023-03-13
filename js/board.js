@@ -9,7 +9,7 @@ let tasks = [
     "Dates": "2023-06-01",
     "Priorities": "Urgent",
     // "Subtasks": subtask,
-    "category": "open",
+    "category": "TASKS_todo",
     },
     {
     "ID": 1,
@@ -20,7 +20,7 @@ let tasks = [
     "Dates": "2023-05-01",
     "Priorities": "Medium",
     // "Subtasks": subtask,
-    "category": "open",
+    "category": "TASKS_todo",
     },  
     {
     "ID": 2,
@@ -31,7 +31,7 @@ let tasks = [
     "Dates": "2023-04-21",
     "Priorities": "Low",
     // "Subtasks": subtask,
-    "category": "open",
+    "category": "TASKS_todo",
     },
     {
     "ID": 3,
@@ -42,13 +42,36 @@ let tasks = [
     "Dates": "2023-07-21",
     "Priorities": "Low",
     // "Subtasks": subtask,
-    "category": "closed",
+    "category": "TASKS_inProgress",
     }
 ];
 
 
-function updateHTML () {
-    let open = tasks.filter(t => t['category'] == 'open');
+/* --Drag'N Drop Funktionen-- */
+
+
+let currentDraggedElement;
+
+
+function startDragging(ID) {           // löst den div-Container aus der normalen Strutur - zum Ziehen (Drag) - und weißt gleichzeitig eine eindeutige ID zu
+    currentDraggedElement = ID;         
+    console.log(currentDraggedElement);
+}
+
+
+function allowDrop(ev) {        // diese Funktion verändert das Standartverhalten von div-Containern, so, dass, wir ein Drag'nDrop-Element überhaupt über einem div-Conatiner abwerfen können
+    ev.preventDefault();
+  }
+
+
+function moveTo (category) {
+    tasks[currentDraggedElement]['category'] = category; // z.B. das Tasks[{}]-Objekt mit ID 1: Das Feld 'cateory' ändert sich zu 'TASKS_inProgress' oder 'TASKS_todo'
+    updateHTML();
+}
+
+
+function updateHTML () {            // diese Renderfunktion filtert die Objekte des JSON-Arrays zunächst nach 'category'. Entsprechend der zugewiesenen 'Standartcategory' werden diese direkt in die jeweiligen TASK-Felder hinein gerendert. Sämtliche JSON-Array Informationen werden durch die for-Schleifen ausgelesen und per 'element' und 'i' weitergegeben an die templatePostit () Funktion.
+    let open = tasks.filter(t => t['category'] == 'TASKS_todo');
 
     document.getElementById('TASKS_todo').innerHTML = '';
 
@@ -58,48 +81,47 @@ function updateHTML () {
     }
 
 
-    let closed = tasks.filter(t => t['category'] == 'closed');
+    let TASKS_inProgress = tasks.filter(t => t['category'] == 'TASKS_inProgress');
+    
     document.getElementById('TASKS_inProgress').innerHTML = '';
 
-    for (let i = 0; i < closed.length; i++) {
-        const element = closed[i];
+    for (let i = 0; i < TASKS_inProgress.length; i++) {
+        const element = TASKS_inProgress[i];
         document.getElementById('TASKS_inProgress').innerHTML += templatePostit(element, i);
     }
+
+
+    let TASKS_awaitingFeedback = tasks.filter(t => t['category'] == 'TASKS_awaitingFeedback');
+    
+    document.getElementById('TASKS_awaitingFeedback').innerHTML = '';
+
+    for (let i = 0; i < TASKS_awaitingFeedback.length; i++) {
+        const element = TASKS_awaitingFeedback[i];
+        document.getElementById('TASKS_awaitingFeedback').innerHTML += templatePostit(element, i);
+    }
+
+
+    let TASKS_done = tasks.filter(t => t['category'] == 'TASKS_done');
+    
+    document.getElementById('TASKS_done').innerHTML = '';
+
+    for (let i = 0; i < TASKS_done.length; i++) {
+        const element = TASKS_done[i];
+        document.getElementById('TASKS_done').innerHTML += templatePostit(element, i);
+        
+    }
+
 }
-            //generateTodoHTML ()
+ 
 
-// function generatePostit(element) {
-//     Postit = document.getElementById('TASKS');
-//     Postit.innerHTML = '';
-
-//     for (let i = 0; i < tasks.length; i++) {
-//         let task = tasks[i];
-//         Postit.innerHTML += templatePostit(task,i, element); 
-//     }
-    
-// }
-
-
-// function generatePostit(element) {
-//     Postit = document.getElementById('TASKS');
-//     Postit.innerHTML = '';
-
-//     for (let i = 0; i < tasks.length; i++) {
-//         let task = tasks[i];
-//         Postit.innerHTML += templatePostit(task,i, element); 
-//     }
-    
-// }
-// ${element['id']}
-
-function templatePostit (task,i, element) {
+function templatePostit (element,i, ) {
     return `
         <div draggable="true" ondragstart="startDragging(${element['ID']})" onclick="slideIn(${i})" class="postIt" id="postIt">
         <div class="postItInterior">
             <div class="postIt_Head">
-                <div class="postIt_Labels ${task['labels']}">${task['labels']}</div>
-                <div class="postIT_Headline">${task['titles']}</div>
-                <div class="postIt_TaskDescriptions">${task['descriptions']}</div>
+                <div class="postIt_Labels ${element['labels']}">${element['labels']}</div>
+                <div class="postIT_Headline">${element['titles']}</div>
+                <div class="postIt_TaskDescriptions">${element['descriptions']}</div>
             </div>
             <div class="postIt_Body">
                 <div class="postIt_ProgressBar"><i src="assets/img/Frame 141.png"></div>
@@ -107,12 +129,15 @@ function templatePostit (task,i, element) {
             </div>
             <div class="postIt_Bottom">
                 <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
-                <div id="postIt_PriorityClass" class="postIt_PriorityClass ${task['Priorities']}"></div>
+                <div id="postIt_PriorityClass" class="postIt_PriorityClass ${element['Priorities']}"></div>
             </div>
         </div>
     </div>
     `;
 }
+
+
+/*  --PoPup Container--  */
 
 
 function renderPopUpContainer(i) {
@@ -160,6 +185,9 @@ function renderPopUpContainer(i) {
     </div>
     `;
 }
+
+
+    /* --Slide Funktionen--*/
 
 
 function slideIn(i){
@@ -240,6 +268,9 @@ function renderPopUpContainer_modModus (i) {
 }
 
 
+/* --Priority Buttons-- */
+
+
 function priorityRed() {
     priority = "Urgent";
     let red = document.getElementById('PopUpMM_Priority_Labels_red');
@@ -311,6 +342,33 @@ function priorityGreen() {
 
 }
 
+
+
+           //generateTodoHTML ()
+
+// function generatePostit(element) {
+//     Postit = document.getElementById('TASKS');
+//     Postit.innerHTML = '';
+
+//     for (let i = 0; i < tasks.length; i++) {
+//         let task = tasks[i];
+//         Postit.innerHTML += templatePostit(task,i, element); 
+//     }
+    
+// }
+
+
+// function generatePostit(element) {
+//     Postit = document.getElementById('TASKS');
+//     Postit.innerHTML = '';
+
+//     for (let i = 0; i < tasks.length; i++) {
+//         let task = tasks[i];
+//         Postit.innerHTML += templatePostit(task,i, element); 
+//     }
+    
+// }
+// ${element['id']}
 
 
 // let prioIMGArray = ["assets/img/prio-low.svg", "assets/img/prio-medium.svg", "assets/img/prio-urgent.svg"];
