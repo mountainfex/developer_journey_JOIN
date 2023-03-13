@@ -1,6 +1,13 @@
 let email = "";
 let users;
 
+// async function init() {
+//     setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+//     await downloadFromServer();
+//     users = JSON.parse(backend.getItem('users')) || [];
+// }
+
+
 function onPageLoad(){
     email = getEmailURLParameter();
 }
@@ -17,7 +24,6 @@ function onSubmit(event){
 }
 
 function resetPassword(){
-    let users = JSON.parse(backend.getItem('users')) || [];
     let confirmedPassword = document.getElementById("confirmPassword").value;
 
     let newPassword =  {password: confirmedPassword}

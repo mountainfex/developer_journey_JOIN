@@ -1,3 +1,12 @@
+let contacts  = [];
+setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+
+async function init() {
+    await downloadFromServer();
+    contacts = JSON.parse(backend.getItem('contacts')) || [];
+    contactinit();
+    console.log(contacts);
+}
 
 function slideIn(){
     let popup = document.getElementById("popup");
@@ -46,59 +55,62 @@ function slideEditOut() {
 }
 
 
-let contacts = [
-    {
+// let contacts = [
+//     {
         
-        "firstname": "Anton",
-        "surname": "Mayer",
-        "email": "antom@gmail.com",
-        "phone": "491111111111",
-    },
-    {
+//         "firstname": "Anton",
+//         "surname": "Mayer",
+//         "email": "antom@gmail.com",
+//         "phone": "491111111111",
+//     },
+//     {
         
-        "firstname": "Anja",
-        "surname": "Schulz",
-        "email": "schulz@hotmail.com",
-        "phone": "491111111112",
-    },
-    {
+//         "firstname": "Anja",
+//         "surname": "Schulz",
+//         "email": "schulz@hotmail.com",
+//         "phone": "491111111112",
+//     },
+//     {
         
-        "firstname": "Benedikt",
-        "surname": "Ziegler",
-        "email": "benedikt@gmail.com",
-        "phone": "491111111113",
-    },
-    {
+//         "firstname": "Benedikt",
+//         "surname": "Ziegler",
+//         "email": "benedikt@gmail.com",
+//         "phone": "491111111113",
+//     },
+//     {
         
-        "firstname": "David",
-        "surname": "Eisenberg",
-        "email": "davidberg@gmail.com",
-        "phone": "491111111114",
-    },
-    {
+//         "firstname": "David",
+//         "surname": "Eisenberg",
+//         "email": "davidberg@gmail.com",
+//         "phone": "491111111114",
+//     },
+//     {
         
-        "firstname": "Eva",
-        "surname": "Fischer",
-        "email": "eva@gmail.com",
-        "phone": "491111111115",
-    },
-    {
+//         "firstname": "Eva",
+//         "surname": "Fischer",
+//         "email": "eva@gmail.com",
+//         "phone": "491111111115",
+//     },
+//     {
         
-        "firstname": "Emmanuel",
-        "surname": "Mauer",
-        "email": "emmanuelMa@gmail.com",
-        "phone": "491111111116",
-    }
-];
+//         "firstname": "Emmanuel",
+//         "surname": "Mauer",
+//         "email": "emmanuelMa@gmail.com",
+//         "phone": "491111111116",
+//     }
+// ];
 
 let sortetcontactlist = [];
 let letters = [];
 // let newcontact = [];
 // funktionen aufruf 
+
 function contactinit(){
+
     generateLetters();
     renderLetters();
     generateContactsList();
+
 }
 // firstletter sort and generate
 function generateLetters(){
@@ -216,10 +228,16 @@ function addNewContact(){
     }
     
     contacts.push(newcontact);
+    pushContactBackend();
     // console.log(contacts);
     contactinit();
     
 }
+
+async function pushContactBackend(){
+    await backend.setItem('contacts', JSON.stringify(contacts));
+}
+
 // edit contact
 function contactInformationEditButton(i){
     let popupedit = document.getElementById('popupedit');
@@ -236,6 +254,7 @@ function contactInformationEditButton(i){
     document.getElementById(`editEmail${i}`).value = email;
     document.getElementById(`editPhone${i}`).value = phone;
 }
+
 function renderPopupEditContact(i){
     return`
     <div class="popUpContactE" id="mainPopUpedit">
@@ -277,6 +296,7 @@ function renderPopupEditContact(i){
     
     `;
 }
+
 function saveEditContact(i){
     let name = document.getElementById(`editName${i}`).value;
     let email = document.getElementById(`editEmail${i}`).value;
@@ -291,8 +311,7 @@ function saveEditContact(i){
     lastn = fullname[1];
     let firstn2 = firstn.charAt(0).toUpperCase() + firstn.slice(1);
     let lastn2 = lastn.charAt(0).toUpperCase() + lastn.slice(1);
-    let newcontact = {
-        
+    let newcontact = {        
         "firstname": firstn2,
         "surname": lastn2,
         "email": email,
@@ -300,9 +319,11 @@ function saveEditContact(i){
     }
     contacts.splice(i, 1, newcontact);
     // console.log(contacts);
+    pushContactBackend();
     contactinit();
     openContact(i);
 }
+
 // deleteContact
 function deleteEditContact(i){
     document.getElementById('contact-selection').innerHTML = "";
@@ -312,6 +333,7 @@ function deleteEditContact(i){
     contacts.splice(i, 1);
     
     // console.log(letters); 
-   contactinit();
+    pushContactBackend();
+    contactinit();
     
 }
