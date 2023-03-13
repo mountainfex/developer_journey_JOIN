@@ -16,9 +16,7 @@ async function resetPassword() {
             user.password = newPassword.value;
             await backend.setItem('users', JSON.stringify(users));
             console.log('Password reset successful!');
-        //     document.getElementById('successful-reset').innerHTML += /*html*/`<div class="send-mail">
-        //         <img src="../src/img/resetPassword.svg">
-        // </div>`
+//BESTÄTIGUNGSANIMATION
             setTimeout(function(){window.location.href = '/01Join/index.html'} , 3000);
         } else {
             console.log('Passwords do not match');

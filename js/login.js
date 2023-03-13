@@ -1,3 +1,5 @@
+let currentUser = [];
+
 setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
 
 async function init() {
@@ -17,10 +19,23 @@ function login (){
     let password = document.getElementById('password');
     let user = users.find(u => u.email == email.value && u.password == password.value);
     if (user) {
-        window.location.href = 'summary.html'
+        saveLogin();
+        window.location.href = `summary.html`;
     } else {
         shakeElement();
     }
+}
+
+function saveLogin(){
+    let email = document.getElementById('email').value;
+
+    currentUser.push(email);
+    saveArrayToLocalStorage("Email", currentUser);
+
+}
+
+function saveArrayToLocalStorage(key, currentUser) {
+    localStorage.setItem(key, JSON.stringify(currentUser));
 }
 
 function guestLogin(){
