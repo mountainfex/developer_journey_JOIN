@@ -1,8 +1,5 @@
 setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
 
-let username = [];
-let checkbox = [];
-
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];

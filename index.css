@@ -301,7 +301,7 @@
 }
 
 .shake{
-    border: 3px solid red;
+    border: 1px solid red;
     position: relative;
     animation: shake 0.2s;
 }
@@ -322,51 +322,9 @@
     display: none !important;
 }
 
-.slidein{
-    display: flex ;
-    animation: slide-in 600ms ease-in-out;
-}
-
-.slideout {
-    animation: slide-out 600ms ease-in-out;
-}
-
-.fadein{
-    display: flex ;
-    animation: fade-in 600ms ease-in-out;
-}
 .fadeout{
     animation: fade-out 600ms ease-in-out;
 }
-
-
-@keyframes slide-in {
-	0% {
-		transform: translateX(250%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-out {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(250%);
-	}
-}
-
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   @keyframes fade-out {
     0% {
       opacity: 1;

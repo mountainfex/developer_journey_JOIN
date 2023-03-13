@@ -102,6 +102,33 @@ input:focus {
   outline: none;
 }
 
+.entertitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 21px;
+  gap: 10px;
+  width: 422px;
+  height: 51px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: white !important;
+
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.entertitle::placeholder {
+  color: #d1d1d1;
+}
+
+.entertitle:focus {
+  outline: none;
+}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -411,6 +438,10 @@ input:focus {
   font-weight: 400;
   font-size: 21px;
   line-height: 120%;
+  color: #000000;
+}
+
+.date-field::placeholder {
   color: #d1d1d1;
 }
 
