@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
     
 </head>
-<body onload="includeHTML(), generatePostit()">
+<body onload="includeHTML(), updateHTML(), generatePostit()">
     <div w3-include-html="assets/templates/Navbar.html"></div>
    
     <div class="boxMajor">
@@ -41,7 +41,7 @@
                         <p>To do</p>
                         <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
                     </div>
-                    <div id="TASKS">
+                    <div id="TASKS_todo">
                         <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
                             <div class="postItInterior">
                                 <div class="postIt_Head">
@@ -61,10 +61,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="dragNdrop_2_InProgress">
+                <div id="dragNdrop_2_InProgress" class="dragNdrop_2_InProgress">
                     <div class="toolsBottom">
                         <p>In progress</p>
                         <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
+                    </div>
+                    <div id="TASKS_inProgress">
+
                     </div>
 
               

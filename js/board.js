@@ -1,6 +1,7 @@
 
 let tasks = [
     {
+    "ID": 0,
     "titles": "Neue Webseite - online Termin",
     "descriptions": "Neue JavaScript Funktionen und Spezial-Effekte müssen noch eingebaut werden",
     "labels": "Design",
@@ -8,8 +9,10 @@ let tasks = [
     "Dates": "2023-06-01",
     "Priorities": "Urgent",
     // "Subtasks": subtask,
+    "category": "open",
     },
     {
+    "ID": 1,
     "titles": "Präsentation",
     "descriptions": "Produktpräsentation unseres neuen Produkts 'Pokemon-Sammelalbum' ",
     "labels": "Marketing",
@@ -17,8 +20,10 @@ let tasks = [
     "Dates": "2023-05-01",
     "Priorities": "Medium",
     // "Subtasks": subtask,
+    "category": "open",
     },  
     {
+    "ID": 2,
     "titles": "Druckerpapier bestellen",
     "descriptions": "20 Pakete mit 80g-Papier(recyclet)",
     "labels": "Backoffice",
@@ -26,26 +31,70 @@ let tasks = [
     "Dates": "2023-04-21",
     "Priorities": "Low",
     // "Subtasks": subtask,
+    "category": "open",
+    },
+    {
+    "ID": 3,
+    "titles": "Kaffee Einkaufen",
+    "descriptions": "100 Pack Kaffee (aromatisch)",
+    "labels": "Backoffice",
+    "Personell": "Sebastian Grundig",
+    "Dates": "2023-07-21",
+    "Priorities": "Low",
+    // "Subtasks": subtask,
+    "category": "closed",
     }
 ];
 
 
-function generatePostit() {
-    Postit = document.getElementById('TASKS');
-    Postit.innerHTML = '';
+function updateHTML () {
+    let open = tasks.filter(t => t['category'] == 'open');
 
-    for (let i = 0; i < tasks.length; i++) {
-        let task = tasks[i];
-        Postit.innerHTML += templatePostit(task,i); 
+    document.getElementById('TASKS_todo').innerHTML = '';
 
+    for (let i = 0; i < open.length; i++) {
+        const element = open[i];
+        document.getElementById('TASKS_todo').innerHTML += templatePostit(element, i);
     }
-    
+
+
+    let closed = tasks.filter(t => t['category'] == 'closed');
+    document.getElementById('TASKS_inProgress').innerHTML = '';
+
+    for (let i = 0; i < closed.length; i++) {
+        const element = closed[i];
+        document.getElementById('TASKS_inProgress').innerHTML += templatePostit(element, i);
+    }
 }
+            //generateTodoHTML ()
+
+// function generatePostit(element) {
+//     Postit = document.getElementById('TASKS');
+//     Postit.innerHTML = '';
+
+//     for (let i = 0; i < tasks.length; i++) {
+//         let task = tasks[i];
+//         Postit.innerHTML += templatePostit(task,i, element); 
+//     }
+    
+// }
 
 
-function templatePostit (task,i) {
+// function generatePostit(element) {
+//     Postit = document.getElementById('TASKS');
+//     Postit.innerHTML = '';
+
+//     for (let i = 0; i < tasks.length; i++) {
+//         let task = tasks[i];
+//         Postit.innerHTML += templatePostit(task,i, element); 
+//     }
+    
+// }
+// ${element['id']}
+
+function templatePostit (task,i, element) {
     return `
-        <div onclick="slideIn(${i})" class="postIt" id="openPopUpContainer">
+        <div draggable="true" ondragstart="startDragging(${element['ID']})" onclick="slideIn(${i})" class="postIt" id="postIt">
         <div class="postItInterior">
             <div class="postIt_Head">
                 <div class="postIt_Labels ${task['labels']}">${task['labels']}</div>
@@ -188,8 +237,8 @@ function renderPopUpContainer_modModus (i) {
     </div>
     </div>
     `;
-
 }
+
 
 function priorityRed() {
     priority = "Urgent";
